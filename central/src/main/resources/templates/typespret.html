@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Types de prêt</title>
+</head>
+<body>
+<h1>Liste des types de prêt</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Libellé</th>
+        <th>Modalité</th>
+        <th>Montant min</th>
+        <th>Montant max</th>
+        <th>Revenus min</th>
+        <th>Taux</th>
+    </tr>
+    <tr th:each="t : ${types}">
+        <td th:text="${t.idTypePret}"></td>
+        <td th:text="${t.libelle}"></td>
+        <td th:text="${t.modalite}"></td>
+        <td th:text="${t.montant_min}"></td>
+        <td th:text="${t.montant_max}"></td>
+        <td th:text="${t.revenus_min}"></td>
+        <td th:text="${t.taux}"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,446 @@
+[
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.CompteDepotController",
+    "Method": "GetById",
+    "RelativePath": "api/comptedepot/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.CompteDepotController",
+    "Method": "Add",
+    "RelativePath": "api/comptedepot/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compteDepot",
+        "Type": "DepotServiceAPI.Models.CompteDepot",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.CompteDepotController",
+    "Method": "GetAll",
+    "RelativePath": "api/comptedepot/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.CompteDepotController",
+    "Method": "Delete",
+    "RelativePath": "api/comptedepot/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.CompteDepotController",
+    "Method": "Update",
+    "RelativePath": "api/comptedepot/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compteDepot",
+        "Type": "DepotServiceAPI.Models.CompteDepot",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.HistoriqueStatusController",
+    "Method": "GetById",
+    "RelativePath": "api/historiquestatus/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.HistoriqueStatusController",
+    "Method": "Add",
+    "RelativePath": "api/historiquestatus/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "historiqueStatusComptes",
+        "Type": "DepotServiceAPI.Models.HistoriqueStatusComptes",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.HistoriqueStatusController",
+    "Method": "GetAll",
+    "RelativePath": "api/historiquestatus/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.HistoriqueStatusController",
+    "Method": "Delete",
+    "RelativePath": "api/historiquestatus/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.HistoriqueStatusController",
+    "Method": "Update",
+    "RelativePath": "api/historiquestatus/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "historiqueStatusComptes",
+        "Type": "DepotServiceAPI.Models.HistoriqueStatusComptes",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.OperationsDepotController",
+    "Method": "GetById",
+    "RelativePath": "api/operationsdepot/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.OperationsDepotController",
+    "Method": "Add",
+    "RelativePath": "api/operationsdepot/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "operationsDepot",
+        "Type": "DepotServiceAPI.Models.OperationsDepot",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.OperationsDepotController",
+    "Method": "GetAll",
+    "RelativePath": "api/operationsdepot/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.OperationsDepotController",
+    "Method": "Delete",
+    "RelativePath": "api/operationsdepot/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.OperationsDepotController",
+    "Method": "Update",
+    "RelativePath": "api/operationsdepot/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "operationsDepot",
+        "Type": "DepotServiceAPI.Models.OperationsDepot",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.StatusController",
+    "Method": "GetById",
+    "RelativePath": "api/status/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.StatusController",
+    "Method": "Add",
+    "RelativePath": "api/status/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "DepotServiceAPI.Models.Status",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.StatusController",
+    "Method": "GetAll",
+    "RelativePath": "api/status/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.StatusController",
+    "Method": "Delete",
+    "RelativePath": "api/status/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.StatusController",
+    "Method": "Update",
+    "RelativePath": "api/status/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "DepotServiceAPI.Models.Status",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.TauxController",
+    "Method": "GetById",
+    "RelativePath": "api/taux/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.TauxController",
+    "Method": "Add",
+    "RelativePath": "api/taux/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taux",
+        "Type": "DepotServiceAPI.Models.Taux",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.TauxController",
+    "Method": "GetAll",
+    "RelativePath": "api/taux/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.TauxController",
+    "Method": "Delete",
+    "RelativePath": "api/taux/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.TauxController",
+    "Method": "Update",
+    "RelativePath": "api/taux/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taux",
+        "Type": "DepotServiceAPI.Models.Taux",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.TypeOperationController",
+    "Method": "GetById",
+    "RelativePath": "api/typeoperation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.TypeOperationController",
+    "Method": "Add",
+    "RelativePath": "api/typeoperation/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "typeOperation",
+        "Type": "DepotServiceAPI.Models.TypeOperation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.TypeOperationController",
+    "Method": "GetAll",
+    "RelativePath": "api/typeoperation/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.TypeOperationController",
+    "Method": "Delete",
+    "RelativePath": "api/typeoperation/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DepotServiceAPI.Controllers.TypeOperationController",
+    "Method": "Update",
+    "RelativePath": "api/typeoperation/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "typeOperation",
+        "Type": "DepotServiceAPI.Models.TypeOperation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

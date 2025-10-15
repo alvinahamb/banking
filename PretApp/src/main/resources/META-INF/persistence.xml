@@ -1,0 +1,142 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.1">
+
+    <persistence-unit name="PretPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/PretDS</jta-data-source>
+        <class>com.banque.pret.entity.Pret</class>
+        <properties>
+            <!-- Hibernate doit savoir le dialect -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            
+            <!-- Génération du schéma -->
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            
+            <!-- Debug SQL -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="TypePretPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/PretDS</jta-data-source>
+        <class>com.banque.pret.entity.TypePret</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="StatusPretPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/PretDS</jta-data-source>
+        <class>com.banque.pret.entity.StatusPret</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+    
+    <persistence-unit name="ModeDePaiementPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/PretDS</jta-data-source>
+        <class>com.banque.pret.entity.ModeDePaiement</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+    
+    <persistence-unit name="EcheancePU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/PretDS</jta-data-source>
+        <class>com.banque.pret.entity.Echeance</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+        
+    <persistence-unit name="RemboursementPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/PretDS</jta-data-source>
+        <class>com.banque.pret.entity.Remboursement</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+    
+    <persistence-unit name="HistoriquePretPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/PretDS</jta-data-source>
+        <class>com.banque.pret.entity.HistoriquePret</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <!-- client  -->
+    <persistence-unit name="ClientsPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/ClientDS</jta-data-source>
+        <class>com.banque.pret.entity.client.Clients</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="TrancheRevenuPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/ClientDS</jta-data-source>
+        <class>com.banque.pret.entity.client.TrancheRevenu</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="StatusClientPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/ClientDS</jta-data-source>
+        <class>com.banque.pret.entity.client.StatusClient</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="InformationProfessionnelPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/ClientDS</jta-data-source>
+        <class>com.banque.pret.entity.client.InformationProfessionnel</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="HistoriqueClientsPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/ClientDS</jta-data-source>
+        <class>com.banque.pret.entity.client.HistoriqueClients</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

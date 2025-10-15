@@ -1,0 +1,75 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.1">
+
+    <persistence-unit name="StatusPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/CourantDS</jta-data-source>
+        <class>com.banque.pret.entity.Status</class>
+        <properties>
+            <!-- Hibernate doit savoir le dialect -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            
+            <!-- Génération du schéma -->
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            
+            <!-- Debug SQL -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="TypeOperationPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/CourantDS</jta-data-source>
+        <class>com.banque.courant.entity.TypeOperation</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="CompteCourantPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/CourantDS</jta-data-source>
+        <class>com.banque.courant.entity.CompteCourant</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="HistoriqueVirementPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/CourantDS</jta-data-source>
+        <class>com.banque.courant.entity.HistoriqueVirement</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="OperationsCourantPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/CourantDS</jta-data-source>
+        <class>com.banque.courant.entity.OperationsCourant</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="HistoriqueStatusPU" transaction-type="JTA">
+        <jta-data-source>java:/jdbc/CourantDS</jta-data-source>
+        <class>com.banque.courant.entity.HistoriqueStatus</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

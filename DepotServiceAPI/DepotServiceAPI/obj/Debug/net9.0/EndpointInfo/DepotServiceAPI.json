@@ -1,0 +1,917 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "DepotServiceAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/comptedepot/all": {
+      "get": {
+        "tags": [
+          "CompteDepot"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/comptedepot/{id}": {
+      "get": {
+        "tags": [
+          "CompteDepot"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/comptedepot/add": {
+      "post": {
+        "tags": [
+          "CompteDepot"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompteDepot"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompteDepot"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompteDepot"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/comptedepot/update": {
+      "put": {
+        "tags": [
+          "CompteDepot"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompteDepot"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompteDepot"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompteDepot"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/comptedepot/delete/{id}": {
+      "delete": {
+        "tags": [
+          "CompteDepot"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/historiquestatus/all": {
+      "get": {
+        "tags": [
+          "HistoriqueStatus"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/historiquestatus/{id}": {
+      "get": {
+        "tags": [
+          "HistoriqueStatus"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/historiquestatus/add": {
+      "post": {
+        "tags": [
+          "HistoriqueStatus"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistoriqueStatusComptes"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistoriqueStatusComptes"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistoriqueStatusComptes"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/historiquestatus/update": {
+      "put": {
+        "tags": [
+          "HistoriqueStatus"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistoriqueStatusComptes"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistoriqueStatusComptes"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistoriqueStatusComptes"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/historiquestatus/delete/{id}": {
+      "delete": {
+        "tags": [
+          "HistoriqueStatus"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/operationsdepot/all": {
+      "get": {
+        "tags": [
+          "OperationsDepot"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/operationsdepot/{id}": {
+      "get": {
+        "tags": [
+          "OperationsDepot"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/operationsdepot/add": {
+      "post": {
+        "tags": [
+          "OperationsDepot"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationsDepot"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationsDepot"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationsDepot"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/operationsdepot/update": {
+      "put": {
+        "tags": [
+          "OperationsDepot"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationsDepot"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationsDepot"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationsDepot"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/operationsdepot/delete/{id}": {
+      "delete": {
+        "tags": [
+          "OperationsDepot"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/status/all": {
+      "get": {
+        "tags": [
+          "Status"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/status/{id}": {
+      "get": {
+        "tags": [
+          "Status"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/status/add": {
+      "post": {
+        "tags": [
+          "Status"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Status"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Status"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Status"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/status/update": {
+      "put": {
+        "tags": [
+          "Status"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Status"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Status"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Status"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/status/delete/{id}": {
+      "delete": {
+        "tags": [
+          "Status"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/taux/all": {
+      "get": {
+        "tags": [
+          "Taux"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/taux/{id}": {
+      "get": {
+        "tags": [
+          "Taux"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/taux/add": {
+      "post": {
+        "tags": [
+          "Taux"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Taux"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Taux"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Taux"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/taux/update": {
+      "put": {
+        "tags": [
+          "Taux"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Taux"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Taux"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Taux"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/taux/delete/{id}": {
+      "delete": {
+        "tags": [
+          "Taux"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/typeoperation/all": {
+      "get": {
+        "tags": [
+          "TypeOperation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/typeoperation/{id}": {
+      "get": {
+        "tags": [
+          "TypeOperation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/typeoperation/add": {
+      "post": {
+        "tags": [
+          "TypeOperation"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeOperation"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeOperation"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeOperation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/typeoperation/update": {
+      "put": {
+        "tags": [
+          "TypeOperation"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeOperation"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeOperation"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeOperation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/typeoperation/delete/{id}": {
+      "delete": {
+        "tags": [
+          "TypeOperation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CompteDepot": {
+        "required": [
+          "dateOuverture",
+          "idClient",
+          "idTaux",
+          "numeroCompte",
+          "soldeActuel"
+        ],
+        "type": "object",
+        "properties": {
+          "idCompteDepot": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numeroCompte": {
+            "type": "string",
+            "nullable": true
+          },
+          "idClient": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "soldeActuel": {
+            "type": "number",
+            "format": "double"
+          },
+          "dateOuverture": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateCloture": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idTaux": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "taux": {
+            "$ref": "#/components/schemas/Taux"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HistoriqueStatusComptes": {
+        "required": [
+          "dateChangement",
+          "idCompteDepot",
+          "idStatus"
+        ],
+        "type": "object",
+        "properties": {
+          "idHistoriqueDepot": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idCompteDepot": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idStatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateChangement": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "compteDepot": {
+            "$ref": "#/components/schemas/CompteDepot"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OperationsDepot": {
+        "required": [
+          "dateOperation",
+          "idCompteDepot",
+          "idTypeOperation",
+          "montant",
+          "soldeActuel"
+        ],
+        "type": "object",
+        "properties": {
+          "idOperation": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "montant": {
+            "type": "number",
+            "format": "double"
+          },
+          "dateOperation": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateValeur": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "soldeActuel": {
+            "type": "number",
+            "format": "double"
+          },
+          "idVirement": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "idTypeOperation": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idCompteDepot": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "typeOperation": {
+            "$ref": "#/components/schemas/TypeOperation"
+          },
+          "compteDepot": {
+            "$ref": "#/components/schemas/CompteDepot"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Status": {
+        "required": [
+          "libelle"
+        ],
+        "type": "object",
+        "properties": {
+          "idStatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "libelle": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Taux": {
+        "required": [
+          "valeur"
+        ],
+        "type": "object",
+        "properties": {
+          "idTaux": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "valeur": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TypeOperation": {
+        "required": [
+          "credit",
+          "libelle"
+        ],
+        "type": "object",
+        "properties": {
+          "idTypeOperation": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "libelle": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "credit": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

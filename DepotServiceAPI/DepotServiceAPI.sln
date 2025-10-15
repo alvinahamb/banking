@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36408.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepotServiceAPI", "DepotServiceAPI\DepotServiceAPI.csproj", "{A28A65E3-C60E-4C94-A896-1928F1FB0A54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A28A65E3-C60E-4C94-A896-1928F1FB0A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A28A65E3-C60E-4C94-A896-1928F1FB0A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A28A65E3-C60E-4C94-A896-1928F1FB0A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A28A65E3-C60E-4C94-A896-1928F1FB0A54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85C995A8-317D-4E11-9DC8-BC39F91FC982}
+	EndGlobalSection
+EndGlobal

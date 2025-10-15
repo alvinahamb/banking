@@ -1,0 +1,257 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|c:\\users\\erant\\documents\\s5\\archlog\\banque\\depotserviceapi\\depotserviceapi\\repositories\\comptedepotrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|solutionrelative:depotserviceapi\\repositories\\comptedepotrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|c:\\users\\erant\\documents\\s5\\archlog\\banque\\depotserviceapi\\depotserviceapi\\repositories\\operationsdepotrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|solutionrelative:depotserviceapi\\repositories\\operationsdepotrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|c:\\users\\erant\\documents\\s5\\archlog\\banque\\depotserviceapi\\depotserviceapi\\repositories\\historiquestatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|solutionrelative:depotserviceapi\\repositories\\historiquestatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|c:\\users\\erant\\documents\\s5\\archlog\\banque\\depotserviceapi\\depotserviceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|solutionrelative:depotserviceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|c:\\users\\erant\\documents\\s5\\archlog\\banque\\depotserviceapi\\depotserviceapi\\services\\comptedepotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|solutionrelative:depotserviceapi\\services\\comptedepotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Migrations\\20251013074735_updateTypeOpe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DepotServiceAPI\\Migrations\\20251013074735_updateTypeOpe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|c:\\users\\erant\\documents\\s5\\archlog\\banque\\depotserviceapi\\depotserviceapi\\models\\operationsdepot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|solutionrelative:depotserviceapi\\models\\operationsdepot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|c:\\users\\erant\\documents\\s5\\archlog\\banque\\depotserviceapi\\depotserviceapi\\models\\typeoperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|solutionrelative:depotserviceapi\\models\\typeoperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|c:\\users\\erant\\documents\\s5\\archlog\\banque\\depotserviceapi\\depotserviceapi\\models\\taux.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|solutionrelative:depotserviceapi\\models\\taux.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|c:\\users\\erant\\documents\\s5\\archlog\\banque\\depotserviceapi\\depotserviceapi\\models\\comptedepot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|solutionrelative:depotserviceapi\\models\\comptedepot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|c:\\users\\erant\\documents\\s5\\archlog\\banque\\depotserviceapi\\depotserviceapi\\migrations\\20251012140011_update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|solutionrelative:depotserviceapi\\migrations\\20251012140011_update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|c:\\users\\erant\\documents\\s5\\archlog\\banque\\depotserviceapi\\depotserviceapi\\controllers\\comptedepotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|solutionrelative:depotserviceapi\\controllers\\comptedepotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|c:\\users\\erant\\documents\\s5\\archlog\\banque\\depotserviceapi\\depotserviceapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A28A65E3-C60E-4C94-A896-1928F1FB0A54}|DepotServiceAPI\\DepotServiceAPI.csproj|solutionrelative:depotserviceapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 349,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HistoriqueStatusRepository.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Repositories\\HistoriqueStatusRepository.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Repositories\\HistoriqueStatusRepository.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Repositories\\HistoriqueStatusRepository.cs*",
+              "RelativeToolTip": "DepotServiceAPI\\Repositories\\HistoriqueStatusRepository.cs*",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T08:17:55.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Taux.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Models\\Taux.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Models\\Taux.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Models\\Taux.cs",
+              "RelativeToolTip": "DepotServiceAPI\\Models\\Taux.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T07:19:28.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TypeOperation.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Models\\TypeOperation.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Models\\TypeOperation.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Models\\TypeOperation.cs",
+              "RelativeToolTip": "DepotServiceAPI\\Models\\TypeOperation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T07:19:22.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CompteDepotController.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Controllers\\CompteDepotController.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Controllers\\CompteDepotController.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Controllers\\CompteDepotController.cs",
+              "RelativeToolTip": "DepotServiceAPI\\Controllers\\CompteDepotController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T15:02:25.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CompteDepot.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Models\\CompteDepot.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Models\\CompteDepot.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Models\\CompteDepot.cs",
+              "RelativeToolTip": "DepotServiceAPI\\Models\\CompteDepot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T14:07:27.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "DepotServiceAPI\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAkwDgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T12:56:54.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Program.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Program.cs",
+              "RelativeToolTip": "DepotServiceAPI\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAArwBkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T15:16:13.502Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 252,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20251013074735_updateTypeOpe.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Migrations\\20251013074735_updateTypeOpe.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Migrations\\20251013074735_updateTypeOpe.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Migrations\\20251013074735_updateTypeOpe.cs",
+              "RelativeToolTip": "DepotServiceAPI\\Migrations\\20251013074735_updateTypeOpe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T07:47:36.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CompteDepotService.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Services\\CompteDepotService.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Services\\CompteDepotService.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Services\\CompteDepotService.cs",
+              "RelativeToolTip": "DepotServiceAPI\\Services\\CompteDepotService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T07:12:56.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CompteDepotRepository.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Repositories\\CompteDepotRepository.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Repositories\\CompteDepotRepository.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Repositories\\CompteDepotRepository.cs*",
+              "RelativeToolTip": "DepotServiceAPI\\Repositories\\CompteDepotRepository.cs*",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T15:02:07.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20251012140011_Update.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Migrations\\20251012140011_Update.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Migrations\\20251012140011_Update.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Migrations\\20251012140011_Update.cs",
+              "RelativeToolTip": "DepotServiceAPI\\Migrations\\20251012140011_Update.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T14:00:12.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OperationsDepot.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Models\\OperationsDepot.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Models\\OperationsDepot.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Models\\OperationsDepot.cs",
+              "RelativeToolTip": "DepotServiceAPI\\Models\\OperationsDepot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T06:57:01.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OperationsDepotRepository.cs",
+              "DocumentMoniker": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Repositories\\OperationsDepotRepository.cs",
+              "RelativeDocumentMoniker": "DepotServiceAPI\\Repositories\\OperationsDepotRepository.cs",
+              "ToolTip": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\Repositories\\OperationsDepotRepository.cs*",
+              "RelativeToolTip": "DepotServiceAPI\\Repositories\\OperationsDepotRepository.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T07:02:49.242Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
