@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\DepotServiceAPI.csproj": {}
+    "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque-Git\\DepotServiceAPI\\DepotServiceAPI\\DepotServiceAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\DepotServiceAPI.csproj": {
+    "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque-Git\\DepotServiceAPI\\DepotServiceAPI\\DepotServiceAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\DepotServiceAPI.csproj",
+        "projectUniqueName": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque-Git\\DepotServiceAPI\\DepotServiceAPI\\DepotServiceAPI.csproj",
         "projectName": "DepotServiceAPI",
-        "projectPath": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\DepotServiceAPI.csproj",
+        "projectPath": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque-Git\\DepotServiceAPI\\DepotServiceAPI\\DepotServiceAPI.csproj",
         "packagesPath": "C:\\Users\\erant\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque\\DepotServiceAPI\\DepotServiceAPI\\obj\\",
+        "outputPath": "C:\\Users\\erant\\Documents\\S5\\Archlog\\Banque-Git\\DepotServiceAPI\\DepotServiceAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
