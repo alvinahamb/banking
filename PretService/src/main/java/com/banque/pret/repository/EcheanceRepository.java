@@ -12,15 +12,21 @@ public class EcheanceRepository {
     @PersistenceContext(unitName = "EcheancePU")
     private EntityManager em;
 
-    public void save(Echeance e) { em.persist(e); }
+    public void save(Echeance e) {
+        em.persist(e);
+    }
 
-    public Echeance find(Long id) { return em.find(Echeance.class, id); }
+    public Echeance find(Long id) {
+        return em.find(Echeance.class, id);
+    }
 
     public List<Echeance> findAll() {
         return em.createQuery("SELECT e FROM Echeance e", Echeance.class).getResultList();
     }
 
-    public Echeance update(Echeance e) { return em.merge(e); }
+    public Echeance update(Echeance e) {
+        return em.merge(e);
+    }
 
     public boolean delete(Long id) {
         Echeance e = em.find(Echeance.class, id);
@@ -29,5 +35,12 @@ public class EcheanceRepository {
             return true;
         }
         return false;
+    }
+
+    public List<Echeance> findByPretId(Long idPret) {
+        return em.createQuery(
+                "SELECT e FROM Echeance e WHERE e.pret.idPret = :idPret", Echeance.class)
+                .setParameter("idPret", idPret)
+                .getResultList();
     }
 }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Créer un type de prêt</title>
+</head>
+<body>
+<h1>Créer un nouveau type de prêt</h1>
+<form th:action="@{${statuspret.idStatusPret} != null ? '/status-pret/update/' + ${statuspret.idStatusPret} : '/status-pret/create'}" 
+      th:object="${statuspret}" method="post">
+    
+    <label>Libellé :</label>
+    <input type="text" th:field="*{libelle}" required /><br/>
+  
+    <button type="submit" th:text="${statuspret.idStatusPret} != null ? 'Modifier' : 'Créer'">Créer</button></form>
+
+<a href="/">← Retour à la liste</a>
+</body>
+</html>

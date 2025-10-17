@@ -1,7 +1,7 @@
 package com.banque.pret.entity;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "Echeance")
@@ -16,7 +16,7 @@ public class Echeance {
     private Double amortissement;
     private Double annuite;
     private Double capital_fin;
-    private LocalDateTime date_echance;
+    private LocalDate date_echance;
 
     @ManyToOne
     @JoinColumn(name = "idPret", nullable = false)
@@ -29,7 +29,7 @@ public class Echeance {
     public Echeance() {}
 
     public Echeance(Double capital_debut, Double montant_interet, Double amortissement,
-                    Double annuite, Double capital_fin, LocalDateTime date_echance,
+                    Double annuite, Double capital_fin, LocalDate date_echance,
                     Pret pret, StatusPret statusPret) {
         this.capital_debut = capital_debut;
         this.montant_interet = montant_interet;
@@ -60,8 +60,8 @@ public class Echeance {
     public Double getCapital_fin() { return capital_fin; }
     public void setCapital_fin(Double capital_fin) { this.capital_fin = capital_fin; }
 
-    public LocalDateTime getDate_echance() { return date_echance; }
-    public void setDate_echance(LocalDateTime date_echance) { this.date_echance = date_echance; }
+    public LocalDate getDate_echance() { return date_echance; }
+    public void setDate_echance(LocalDate date_echance) { this.date_echance = date_echance; }
 
     public Pret getPret() { return pret; }
     public void setPret(Pret pret) { this.pret = pret; }

@@ -5,7 +5,9 @@
     <title>Types de prêt</title>
 </head>
 <body>
-<h1>Liste des types de prêt</h1>
+<h1>Liste des types de pret</h1>
+<a href="/">Retour</a>
+<a href="/types-pret/formulaire">Créer un nouveau type de prêt</a>
 <table border="1">
     <tr>
         <th>ID</th>
@@ -14,16 +16,24 @@
         <th>Montant min</th>
         <th>Montant max</th>
         <th>Revenus min</th>
-        <th>Taux</th>
+        <th>Taux min</th>
+        <th>Taux max</th>
     </tr>
-    <tr th:each="t : ${types}">
+    <tr th:each="t : ${typespret}">
         <td th:text="${t.idTypePret}"></td>
         <td th:text="${t.libelle}"></td>
         <td th:text="${t.modalite}"></td>
         <td th:text="${t.montant_min}"></td>
         <td th:text="${t.montant_max}"></td>
         <td th:text="${t.revenus_min}"></td>
-        <td th:text="${t.taux}"></td>
+        <td th:text="${t.taux_min}"></td>
+        <td th:text="${t.taux_max}"></td>
+        <td>
+            <a th:href="@{/types-pret/formulaire/{id}(id=${t.idTypePret})}">Update</a>
+        </td>
+        <td>
+        <a th:href="@{/types-pret/delete/{id}(id=${t.idTypePret})}">Delete</a>
+        </td>
     </tr>
 </table>
 </body>

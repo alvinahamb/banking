@@ -17,7 +17,9 @@ public class TypePretService {
 
     public List<TypePret> getAll() { return repo.findAll(); }
 
-    public TypePret update(TypePret t) { return repo.update(t); }
+    public TypePret update(TypePret t) { 
+        
+        return repo.update(t); }
 
     public boolean delete(Long id) { return repo.delete(id); }
 }

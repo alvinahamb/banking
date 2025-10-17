@@ -27,11 +27,12 @@ public class PretRest {
     @Path("/create")
     public Pret create(Pret pret) { return service.create(pret); }
 
-    @PUT
+    @POST
     @Path("/update/{id}")
     public Pret update(Pret pret) { return service.update(pret); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
+
 }

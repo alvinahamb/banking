@@ -35,4 +35,11 @@ public class StatusPretRepository {
         }
         return false;
     }
+
+     public StatusPret findByLibelle(String libelle) {
+        List<StatusPret> result = em.createQuery("SELECT s FROM StatusPret s WHERE s.libelle = :libelle", StatusPret.class)
+                .setParameter("libelle", libelle)
+                .getResultList();
+        return result.isEmpty() ? null : result.get(0);
+    }
 }

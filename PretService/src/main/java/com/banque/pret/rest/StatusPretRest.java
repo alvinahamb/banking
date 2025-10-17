@@ -27,11 +27,17 @@ public class StatusPretRest {
     @Path("/create")
     public StatusPret create(StatusPret type) { return service.create(type); }
 
-    @PUT
+    @POST
     @Path("/update/{id}")
     public StatusPret update(StatusPret type) { return service.update(type); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
+
+    @GET
+    @Path("/libelle/{libelle}")
+    public StatusPret findByLibelle(@PathParam("libelle") String libelle) {
+        return service.findByLibelle(libelle);
+    }
 }

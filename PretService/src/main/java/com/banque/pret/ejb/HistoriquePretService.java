@@ -21,4 +21,12 @@ public class HistoriquePretService {
     public HistoriquePret update(HistoriquePret h) { return repo.update(h); }
 
     public boolean delete(Long id) { return repo.delete(id); }
+    
+    public List<HistoriquePret> getByPret(Long idPret) {
+        return repo.findByPret(idPret);
+    }
+
+    public HistoriquePret getLatestByPret(Long idPret) {
+        return repo.findLatestByPret(idPret);
+    }
 }

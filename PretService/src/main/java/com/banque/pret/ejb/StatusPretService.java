@@ -20,4 +20,7 @@ public class StatusPretService {
     public StatusPret update(StatusPret t) { return repo.update(t); }
 
     public boolean delete(Long id) { return repo.delete(id); }
+
+    // new 
+    public StatusPret findByLibelle(String libelle) { return repo.findByLibelle(libelle); }
 }

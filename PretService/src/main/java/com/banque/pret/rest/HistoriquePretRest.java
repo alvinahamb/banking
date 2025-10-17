@@ -27,11 +27,23 @@ public class HistoriquePretRest {
     @Path("/create")
     public HistoriquePret create(HistoriquePret h) { return service.create(h); }
 
-    @PUT
+    @POST
     @Path("/update/{id}")
     public HistoriquePret update(HistoriquePret h) { return service.update(h); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
+
+    @GET
+    @Path("/byPret/{idPret}")
+    public List<HistoriquePret> getByPret(@PathParam("idPret") Long idPret) {
+        return service.getByPret(idPret);
+    }
+
+    @GET
+    @Path("/latestByPret/{idPret}")
+    public HistoriquePret getLatestByPret(@PathParam("idPret") Long idPret) {
+        return service.getLatestByPret(idPret);
+    }
 }

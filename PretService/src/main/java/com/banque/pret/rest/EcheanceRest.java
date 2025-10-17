@@ -27,11 +27,17 @@ public class EcheanceRest {
     @Path("/create")
     public Echeance create(Echeance e) { return service.create(e); }
 
-    @PUT
+    @POST
     @Path("/update/{id}")
     public Echeance update(Echeance e) { return service.update(e); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
+
+    @GET
+    @Path("/byPret/{id}")
+    public List<Echeance> getEcheancesByPret(@PathParam("id") Long idPret) {
+        return service.getByPretId(idPret);
+    }
 }

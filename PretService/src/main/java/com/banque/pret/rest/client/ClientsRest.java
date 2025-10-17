@@ -27,11 +27,11 @@ public class ClientsRest {
     @Path("/create")
     public Clients create(Clients c) { return service.create(c); }
 
-    @PUT
+    @GET
     @Path("/update/{id}")
     public Clients update(Clients c) { return service.update(c); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
 }

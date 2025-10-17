@@ -1,4 +1,4 @@
-package com.banque.pret.rest.cleint;
+package com.banque.pret.rest.client;
 
 import com.banque.pret.ejb.client.InformationProfessionnelService;
 import com.banque.pret.entity.client.InformationProfessionnel;
@@ -27,11 +27,11 @@ public class InformationProfessionnelRest {
     @Path("/create")
     public InformationProfessionnel create(InformationProfessionnel i) { return service.create(i); }
 
-    @PUT
+    @GET
     @Path("/update/{id}")
     public InformationProfessionnel update(InformationProfessionnel i) { return service.update(i); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
 }

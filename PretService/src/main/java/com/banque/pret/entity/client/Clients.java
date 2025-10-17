@@ -21,11 +21,16 @@ public class Clients {
     private String numero_identite;
     private Date date_ajout;
 
+    @ManyToOne
+    @JoinColumn(name = "idTranche", nullable = false)
+    private TrancheRevenu revenuActuel;
+
     public Clients() {
     }
 
     public Clients(String nom, String prenoms, Date date_de_naissance, String lieu_de_naissance,
-                   String adresse, String telephone, String email, String numero_identite, Date date_ajout) {
+                   String adresse, String telephone, String email, String numero_identite,
+                   Date date_ajout, TrancheRevenu revenuActuel) {
         this.nom = nom;
         this.prenoms = prenoms;
         this.date_de_naissance = date_de_naissance;
@@ -35,6 +40,7 @@ public class Clients {
         this.email = email;
         this.numero_identite = numero_identite;
         this.date_ajout = date_ajout;
+        this.revenuActuel = revenuActuel;
     }
 
     // Getters et Setters
@@ -116,5 +122,13 @@ public class Clients {
 
     public void setDate_ajout(Date date_ajout) {
         this.date_ajout = date_ajout;
+    }
+
+    public TrancheRevenu getrevenuActuel() {
+        return revenuActuel;
+    }
+
+    public void setrevenuActuel(TrancheRevenu revenuActuel) {
+        this.revenuActuel = revenuActuel;
     }
 }

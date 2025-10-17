@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Historique du prêt</title>
+</head>
+<body>
+
+<div>
+    <h3>Historique du prêt n°<span th:text="${idPret}"></span></h3>
+
+    <table border="1">
+        <thead class="table-primary text-center">
+        <tr>
+            <th>ID</th>
+            <th>Date de changement</th>
+            <th>Statut</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="h : ${historiques}">
+            <td th:text="${h.idHistoriquePret}"></td>
+            <td th:text="${h.date_changement}"></td>
+            <td th:text="${h.statusPret != null ? h.statusPret.libelle : 'N/A'}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <a href="/pret/all">← Retour aux prêts</a>
+    </div>
+</div>
+
+</body>
+</html>

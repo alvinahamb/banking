@@ -27,11 +27,11 @@ public class TypePretRest {
     @Path("/create")
     public TypePret create(TypePret type) { return service.create(type); }
 
-    @PUT
+    @POST
     @Path("/update/{id}")
     public TypePret update(TypePret type) { return service.update(type); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
 }

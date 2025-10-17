@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Échéances du prêt</title>
+</head>
+<body>
+
+    <h2>Liste des échéances du prêt n° <span th:text="${idPret}"></span></h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date Échéance</th>
+                <th>Capital Début</th>
+                <th>Intérêt</th>
+                <th>Amortissement</th>
+                <th>Annuité</th>
+                <th>Capital Fin</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="e : ${echeances}">
+                <td th:text="${e.idEcheance}"></td>
+                <td th:text="${e.date_echance}"></td>
+                <td th:text="${e.capital_debut}"></td>
+                <td th:text="${e.montant_interet}"></td>
+                <td th:text="${e.amortissement}"></td>
+                <td th:text="${e.annuite}"></td>
+                <td th:text="${e.capital_fin}"></td>
+                <td th:text="${e.statusPret.libelle}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>

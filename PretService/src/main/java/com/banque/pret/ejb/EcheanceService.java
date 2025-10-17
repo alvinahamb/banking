@@ -12,13 +12,28 @@ public class EcheanceService {
     @Inject
     private EcheanceRepository repo;
 
-    public Echeance create(Echeance e) { repo.save(e); return e; }
+    public Echeance create(Echeance e) {
+        repo.save(e);
+        return e;
+    }
 
-    public Echeance getOne(Long id) { return repo.find(id); }
+    public Echeance getOne(Long id) {
+        return repo.find(id);
+    }
 
-    public List<Echeance> getAll() { return repo.findAll(); }
+    public List<Echeance> getAll() {
+        return repo.findAll();
+    }
 
-    public Echeance update(Echeance e) { return repo.update(e); }
+    public Echeance update(Echeance e) {
+        return repo.update(e);
+    }
 
-    public boolean delete(Long id) { return repo.delete(id); }
+    public boolean delete(Long id) {
+        return repo.delete(id);
+    }
+
+    public List<Echeance> getByPretId(Long idPret) {
+        return repo.findByPretId(idPret);
+    }
 }

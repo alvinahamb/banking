@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des prêts</title>
+</head>
+<body>
+<h1>Liste des prêts</h1>
+<a href="/">Retour</a>
+<a href="/pret/formulaire">Créer un nouveau prêt</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>idClient</th>
+        <th>Montant</th>
+        <th>Date Opération</th>
+        <th>Date Valeur</th>
+        <th>Durée Mois</th>
+        <th>Taux</th>
+        <th>Status actuelle</th>
+        <th>Historique</th>
+        <th>Echeances</th>
+        <th>Remboursement</th>
+    </tr>
+    <tr th:each="t : ${pret}">
+        <td th:text="${t.idPret}"></td>
+        <td th:text="${t.idClient}"></td>
+        <td th:text="${t.montant}"></td>
+        <td th:text="${t.date_operation}"></td>
+        <td th:text="${t.date_valeur}"></td>
+        <td th:text="${t.duree_mois}"></td>
+        <td th:text="${t.taux}"></td>
+        <td th:text="${t.historiquePret.statusPret.libelle}"></td>
+        <td><a th:href="@{'/historiques-pret/byPret/' + ${t.idPret}}">Voir Historique</a></td>
+        <td><a th:href="@{'/echeances/pret/' + ${t.idPret}}">Voir Echeances</a></td>
+        <td><a th:href="@{'/pret/remboursement/' + ${t.idPret}}">Remboursement</a></td>
+    </tr>
+</table>
+</body>
+</html>

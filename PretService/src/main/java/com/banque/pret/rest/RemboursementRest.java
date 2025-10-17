@@ -27,11 +27,11 @@ public class RemboursementRest {
     @Path("/create")
     public Remboursement create(Remboursement r) { return service.create(r); }
 
-    @PUT
+    @POST
     @Path("/update/{id}")
     public Remboursement update(Remboursement r) { return service.update(r); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
 }

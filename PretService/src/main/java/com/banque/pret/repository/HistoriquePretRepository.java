@@ -30,4 +30,22 @@ public class HistoriquePretRepository {
         }
         return false;
     }
+
+    public List<HistoriquePret> findByPret(Long idPret) {
+        return em.createQuery(
+                "SELECT h FROM HistoriquePret h WHERE h.pret.idPret = :idPret",
+                HistoriquePret.class)
+                .setParameter("idPret", idPret)
+                .getResultList();
+    }
+
+    public HistoriquePret findLatestByPret(Long idPret) {
+        List<HistoriquePret> results = em.createQuery(
+                "SELECT h FROM HistoriquePret h WHERE h.pret.idPret = :idPret ORDER BY h.date_changement DESC",
+                HistoriquePret.class) 
+                .setParameter("idPret", idPret)
+                .setMaxResults(1)
+                .getResultList();
+        return results.get(0);
+    }
 }

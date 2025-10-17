@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Types de status</title>
+</head>
+<body>
+<h1>Liste des status de pret</h1>
+<a href="/">Retour</a>
+<a href="/status-pret/formulaire">Créer un nouveau status de prêt</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Libellé</th>
+        <th>Modalité</th>
+    </tr>
+    <tr th:each="t : ${statuspret}">
+        <td th:text="${t.idStatusPret}"></td>
+        <td th:text="${t.libelle}"></td>
+        <td>
+            <a th:href="@{/status-pret/formulaire/{id}(id=${t.idStatusPret})}">Update</a>
+        </td>
+        <td>
+        <a th:href="@{/status-pret/delete/{id}(id=${t.idStatusPret})}">Delete</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

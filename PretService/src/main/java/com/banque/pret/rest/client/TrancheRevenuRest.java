@@ -27,11 +27,11 @@ public class TrancheRevenuRest {
     @Path("/create")
     public TrancheRevenu create(TrancheRevenu t) { return service.create(t); }
 
-    @PUT
+    @GET
     @Path("/update/{id}")
     public TrancheRevenu update(TrancheRevenu t) { return service.update(t); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
 }

@@ -1,7 +1,7 @@
 package com.banque.pret.entity;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "HistoriquePret")
@@ -19,11 +19,11 @@ public class HistoriquePret {
     @JoinColumn(name = "idStatusPret")
     private StatusPret statusPret;
 
-    private LocalDateTime date_changement;
+    private LocalDate date_changement;
 
     public HistoriquePret() {}
 
-    public HistoriquePret(Pret pret, StatusPret statusPret, LocalDateTime date_changement) {
+    public HistoriquePret(Pret pret, StatusPret statusPret, LocalDate date_changement) {
         this.pret = pret;
         this.statusPret = statusPret;
         this.date_changement = date_changement;
@@ -39,6 +39,6 @@ public class HistoriquePret {
     public StatusPret getStatusPret() { return statusPret; }
     public void setStatusPret(StatusPret statusPret) { this.statusPret = statusPret; }
 
-    public LocalDateTime getDate_changement() { return date_changement; }
-    public void setDate_changement(LocalDateTime date_changement) { this.date_changement = date_changement; }
+    public LocalDate getDate_changement() { return date_changement; }
+    public void setDate_changement(LocalDate date_changement) { this.date_changement = date_changement; }
 }
