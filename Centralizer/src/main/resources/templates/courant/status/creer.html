@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1 th:text="${statuscourant.idStatus} != null ? 'Modifier' : 'Créer'" >Créer</h1>
+<form th:action="@{${statuscourant.idStatus} != null ? '/comptecourant/status/update/' + ${statuscourant.idStatus} : '/comptecourant/status/create'}" 
+      th:object="${statuscourant}" method="post">
+    
+    <label for="libelle">Libellé:</label>
+    <input type="text" id="libelle" name="libelle" th:field="*{libelle}" required />
+    <br/><br/>
+
+    <button type="submit" th:text="${statuscourant.idStatus} != null ? 'Modifier' : 'Créer'">Créer</button></form>
+
+<a href="/">← Retour à la liste</a>
+</body>
+</html>

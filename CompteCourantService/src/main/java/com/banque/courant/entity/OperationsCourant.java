@@ -1,8 +1,7 @@
 package com.banque.courant.entity;
 
 import jakarta.persistence.*;
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "OperationsCourant") // table en minuscules
@@ -12,10 +11,10 @@ public class OperationsCourant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idOperation;
 
-    private BigDecimal montant;
-    private LocalDateTime dateOperation;
-    private LocalDateTime dateValeur;
-    private BigDecimal soldeActuel;
+    private  double montant;
+    private LocalDate dateOperation;
+    private LocalDate dateValeur;
+    private  double soldeActuel;
     @ManyToOne
     @JoinColumn(name = "idVirement")
     private HistoriqueVirement virement;
@@ -31,8 +30,8 @@ public class OperationsCourant {
     // Constructeurs
     public OperationsCourant() {}
 
-    public OperationsCourant(BigDecimal montant, LocalDateTime dateOperation, LocalDateTime dateValeur,
-                             BigDecimal soldeActuel, HistoriqueVirement virement,
+    public OperationsCourant( double montant, LocalDate dateOperation, LocalDate dateValeur,
+                              double soldeActuel, HistoriqueVirement virement,
                              TypeOperation typeOperation, CompteCourant compteCourant) {
         this.montant = montant;
         this.dateOperation = dateOperation;
@@ -47,17 +46,17 @@ public class OperationsCourant {
     public Long getIdOperation() { return idOperation; }
     public void setIdOperation(Long idOperation) { this.idOperation = idOperation; }
 
-    public BigDecimal getMontant() { return montant; }
-    public void setMontant(BigDecimal montant) { this.montant = montant; }
+    public  double getMontant() { return montant; }
+    public void setMontant( double montant) { this.montant = montant; }
 
-    public LocalDateTime getDateOperation() { return dateOperation; }
-    public void setDateOperation(LocalDateTime dateOperation) { this.dateOperation = dateOperation; }
+    public LocalDate getDateOperation() { return dateOperation; }
+    public void setDateOperation(LocalDate dateOperation) { this.dateOperation = dateOperation; }
 
-    public LocalDateTime getDateValeur() { return dateValeur; }
-    public void setDateValeur(LocalDateTime dateValeur) { this.dateValeur = dateValeur; }
+    public LocalDate getDateValeur() { return dateValeur; }
+    public void setDateValeur(LocalDate dateValeur) { this.dateValeur = dateValeur; }
 
-    public BigDecimal getSoldeActuel() { return soldeActuel; }
-    public void setSoldeActuel(BigDecimal soldeActuel) { this.soldeActuel = soldeActuel; }
+    public  double getSoldeActuel() { return soldeActuel; }
+    public void setSoldeActuel( double soldeActuel) { this.soldeActuel = soldeActuel; }
 
     public HistoriqueVirement getVirement() { return virement; }
     public void setVirement(HistoriqueVirement virement) { this.virement = virement; }

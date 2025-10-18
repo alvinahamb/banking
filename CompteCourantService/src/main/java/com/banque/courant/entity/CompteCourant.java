@@ -1,8 +1,7 @@
 package com.banque.courant.entity;
 
 import jakarta.persistence.*;
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "CompteCourant")
@@ -14,16 +13,16 @@ public class CompteCourant {
 
     private String numeroCompte;
     private Integer idClient;
-    private BigDecimal soldeActuel;
-    private LocalDateTime dateOuverture;
-    private LocalDateTime dateCloture;
-    private BigDecimal decouvertAutorise;
+    private  double soldeActuel;
+    private LocalDate dateOuverture;
+    private LocalDate dateCloture;
+    private  double decouvertAutorise;
 
     // Constructeurs
     public CompteCourant() {}
 
-    public CompteCourant(String numeroCompte, Integer idClient, BigDecimal soldeActuel,
-                         LocalDateTime dateOuverture, LocalDateTime dateCloture, BigDecimal decouvertAutorise) {
+    public CompteCourant(String numeroCompte, Integer idClient,  double soldeActuel,
+                         LocalDate dateOuverture, LocalDate dateCloture,  double decouvertAutorise) {
         this.numeroCompte = numeroCompte;
         this.idClient = idClient;
         this.soldeActuel = soldeActuel;
@@ -42,15 +41,15 @@ public class CompteCourant {
     public Integer getIdClient() { return idClient; }
     public void setIdClient(Integer idClient) { this.idClient = idClient; }
 
-    public BigDecimal getSoldeActuel() { return soldeActuel; }
-    public void setSoldeActuel(BigDecimal soldeActuel) { this.soldeActuel = soldeActuel; }
+    public  double getSoldeActuel() { return soldeActuel; }
+    public void setSoldeActuel( double soldeActuel) { this.soldeActuel = soldeActuel; }
 
-    public LocalDateTime getDateOuverture() { return dateOuverture; }
-    public void setDateOuverture(LocalDateTime dateOuverture) { this.dateOuverture = dateOuverture; }
+    public LocalDate getDateOuverture() { return dateOuverture; }
+    public void setDateOuverture(LocalDate dateOuverture) { this.dateOuverture = dateOuverture; }
 
-    public LocalDateTime getDateCloture() { return dateCloture; }
-    public void setDateCloture(LocalDateTime dateCloture) { this.dateCloture = dateCloture; }
+    public LocalDate getDateCloture() { return dateCloture; }
+    public void setDateCloture(LocalDate dateCloture) { this.dateCloture = dateCloture; }
 
-    public BigDecimal getDecouvertAutorise() { return decouvertAutorise; }
-    public void setDecouvertAutorise(BigDecimal decouvertAutorise) { this.decouvertAutorise = decouvertAutorise; }
+    public  double getDecouvertAutorise() { return decouvertAutorise; }
+    public void setDecouvertAutorise( double decouvertAutorise) { this.decouvertAutorise = decouvertAutorise; }
 }

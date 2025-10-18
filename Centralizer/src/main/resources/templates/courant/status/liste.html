@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Liste des comptes</h1>
+<a href="/comptecourant">Retour</a>
+<a href="/comptecourant/status/formulaire">Créer un nouveau compte</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Libelle</th>
+    </tr>
+    <tr th:each="t : ${statuscourant}">
+        <td th:text="${t.idStatus}"></td>
+        <td th:text="${t.libelle}"></td>
+        <td>
+            <a th:href="@{/comptecourant/status/formulaire/{id}(id=${t.idStatus})}">Update</a>
+        </td>
+        <td>
+        <a th:href="@{/comptecourant/status/delete/{id}(id=${t.idStatus})}">Delete</a>
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>

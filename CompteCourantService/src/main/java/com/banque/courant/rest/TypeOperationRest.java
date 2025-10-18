@@ -27,11 +27,11 @@ public class TypeOperationRest {
     @Path("/create")
     public TypeOperation create(TypeOperation typeOperation) { return service.create(typeOperation); }
 
-    @PUT
+    @POST
     @Path("/update/{id}")
     public TypeOperation update(TypeOperation typeOperation) { return service.update(typeOperation); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
 }

@@ -27,11 +27,11 @@ public class CompteCourantRest {
     @Path("/create")
     public CompteCourant create(CompteCourant compte) { return service.create(compte); }
 
-    @PUT
+    @POST
     @Path("/update/{id}")
     public CompteCourant update(CompteCourant compte) { return service.update(compte); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
 }

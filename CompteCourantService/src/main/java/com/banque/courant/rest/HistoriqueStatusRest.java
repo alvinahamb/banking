@@ -27,11 +27,11 @@ public class HistoriqueStatusRest {
     @Path("/create")
     public HistoriqueStatus create(HistoriqueStatus historique) { return service.create(historique); }
 
-    @PUT
+    @POST
     @Path("/update/{id}")
     public HistoriqueStatus update(HistoriqueStatus historique) { return service.update(historique); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
 }

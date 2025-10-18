@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Liste des comptes</h1>
+<a href="/comptecourant">Retour</a>
+<a href="/comptecourant/formulaire">Créer un nouveau compte</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Numéro de compte</th>
+        <th>ID Client</th>
+        <th>Solde actuel</th>
+        <th>Date d'ouverture</th>
+    </tr>
+    <tr th:each="t : ${comptecourant}">
+        <td th:text="${t.idCompteCourant}"></td>
+        <td th:text="${t.numeroCompte}"></td>
+        <td th:text="${t.idClient}"></td>
+        <td th:text="${t.soldeActuel}"></td>
+        <td th:text="${t.dateOuverture}"></td>
+        <td>
+            <a th:href="@{/comptecourant/transaction/{id}(id=${t.idCompteCourant})}">Effectuer un transaction</a>
+        </td>
+        <!--/* 
+            <td>
+                <a th:href="@{/comptecourant/formulaire/{id}(id=${t.idCompteCourant})}">Update</a>
+            </td>
+            <td>
+            <a th:href="@{/comptecourant/delete/{id}(id=${t.idCompteCourant})}">Delete</a>
+            </td>
+        */-->
+    </tr>
+</table>
+</body>
+</html>

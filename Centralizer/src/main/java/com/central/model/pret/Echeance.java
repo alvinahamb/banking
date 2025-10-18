@@ -1,6 +1,4 @@
-package com.central.model.pret;
-
-;
+package com.central.model.pret;;
 
 public class Echeance {
 

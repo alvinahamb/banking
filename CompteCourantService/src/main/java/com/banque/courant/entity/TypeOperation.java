@@ -1,6 +1,5 @@
 package com.banque.courant.entity;
 
-import javax.swing.text.StyledEditorKit.BoldAction;
 
 import jakarta.persistence.*;
 
@@ -23,8 +22,8 @@ public class TypeOperation {
     public TypeOperation() {}
 
     // Getters & Setters
-    public Long getId() {return idTypeOperation;}
-    public void setId(Long id) {this.idTypeOperation = id;}
+    public Long getIdTypeOperation() {return idTypeOperation;}
+    public void setIdTypeOperation(Long id) {this.idTypeOperation = id;}
 
     public String getLibelle() {return libelle;}
     public void setLibelle(String libelle) {this.libelle = libelle;}

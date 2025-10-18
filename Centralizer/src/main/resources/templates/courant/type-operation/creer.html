@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1 th:text="${typeoperation.idTypeOperation} != null ? 'Modifier le type' : 'Créer'" >Créer un type</h1>
+<form th:action="@{${typeoperation.idTypeOperation} != null ? '/comptecourant/typeoperation/update/' + ${typeoperation.idTypeOperation} : '/comptecourant/typeoperation/create'}" 
+      th:object="${typeoperation}" method="post">
+    
+    <label for="libelle">Libellé:</label>
+    <input type="text" id="libelle" name="libelle" th:field="*{libelle}" required />
+    <br/><br/>
+
+    <label for="credit">Crédit (true/false):</label>
+    <input type="checkbox" id="credit" name="credit" th:field="*{credit}" />
+    <br/><br/>
+
+    <button type="submit" th:text="${typeoperation.idTypeOperation} != null ? 'Modifier' : 'Créer'">Créer</button></form>
+
+<a href="/">← Retour à la liste</a>
+</body>
+</html>

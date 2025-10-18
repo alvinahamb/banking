@@ -1,7 +1,5 @@
 package com.central.model.pret;
 
-;
-
 public class Remboursement {
 
     private Long idRemboursement;

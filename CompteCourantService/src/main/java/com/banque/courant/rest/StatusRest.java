@@ -27,11 +27,11 @@ public class StatusRest {
     @Path("/create")
     public Status create(Status status) { return service.create(status); }
 
-    @PUT
+    @POST
     @Path("/update/{id}")
     public Status update(Status status) { return service.update(status); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
 }

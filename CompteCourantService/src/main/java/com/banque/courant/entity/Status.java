@@ -16,12 +16,23 @@ public class Status {
         this.libelle = libelle;
     }
 
-    public Status() {}
+    public Status() {
+    }
 
     // Getters & Setters
-    public Long getId() {return idStatus;}
-    public void setId(Long idStatus) { this.idStatus = idStatus;}
+    public Long getIdStatus() {
+        return idStatus;
+    }
 
-    public String getLibelle() {return libelle;}
-    public void setLibelle(String libelle) {this.libelle = libelle;}
+    public void setIdStatus(Long idStatus) {
+        this.idStatus = idStatus;
+    }
+
+    public String getLibelle() {
+        return libelle;
+    }
+
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
+    }
 }

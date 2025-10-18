@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Effectuer une transaction</h1>
+<form th:action="@{/comptecourant/createTransaction/{id}(id=${operationscourant.compteCourant.idCompteCourant})}" 
+      th:object="${operationscourant}" method="get">
+    
+    <label>Type d'operation :</label>
+    <select th:field="*{typeOperation.idTypeOperation}" required>
+        <option th:each="type : ${typeoperations}" 
+                th:value="${type.idTypeOperation}" 
+                th:text="${type.libelle}">
+        </option>
+    </select>
+    <br/>
+
+    <label>Montant :</label>
+    <input type="number" th:field="*{montant}" required/>
+    <br/>
+    <input type="hidden" th:field="*{compteCourant.idCompteCourant}"/>
+
+    <button type="submit">Valider</button></form>
+
+<a href="/">← Retour à la liste</a>
+</body>
+</html>

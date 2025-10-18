@@ -1,6 +1,5 @@
 package com.central.model.pret;
 
-;
 
 public class HistoriquePret {
 

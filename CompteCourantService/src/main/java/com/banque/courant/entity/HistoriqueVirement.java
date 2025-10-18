@@ -1,7 +1,7 @@
 package com.banque.courant.entity;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "HistoriqueVirement") // nom de la table en minuscules
@@ -11,19 +11,24 @@ public class HistoriqueVirement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idVirement;
 
+    private Long idOperation1;
+    private Long idOperation2;
     private double montant;
     private String numeroCompteSource;
     private String numeroCompteDestination;
-    private LocalDateTime dateVirement;
+    private LocalDate dateVirement;
 
     // Constructeurs
     public HistoriqueVirement() {}
 
-    public HistoriqueVirement(double montant, String numeroCompteSource, String numeroCompteDestination, LocalDateTime dateVirement) {
+    public HistoriqueVirement(double montant, String numeroCompteSource, String numeroCompteDestination, LocalDate dateVirement,
+                             Long idOperation1, Long idOperation2) {
         this.montant = montant;
         this.numeroCompteSource = numeroCompteSource;
         this.numeroCompteDestination = numeroCompteDestination;
         this.dateVirement = dateVirement;
+        this.idOperation1 = idOperation1;
+        this.idOperation2 = idOperation2;
     }
 
     // Getters & Setters
@@ -39,6 +44,12 @@ public class HistoriqueVirement {
     public String getNumeroCompteDestination() { return numeroCompteDestination; }
     public void setNumeroCompteDestination(String numeroCompteDestination) { this.numeroCompteDestination = numeroCompteDestination; }
 
-    public LocalDateTime getDateVirement() { return dateVirement; }
-    public void setDateVirement(LocalDateTime dateVirement) { this.dateVirement = dateVirement; }
+    public LocalDate getDateVirement() { return dateVirement; }
+    public void setDateVirement(LocalDate dateVirement) { this.dateVirement = dateVirement; }
+
+    public Long getIdOperation1() { return idOperation1; }
+    public void setIdOperation1(Long idOperation1) { this.idOperation1 = idOperation1; }        
+
+    public Long getIdOperation2() { return idOperation2; }
+    public void setIdOperation2(Long idOperation2) { this.idOperation2 = idOperation2; }
 }

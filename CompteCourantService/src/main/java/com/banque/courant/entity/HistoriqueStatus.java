@@ -1,7 +1,7 @@
 package com.banque.courant.entity;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "HistoriqueStatus")
@@ -20,12 +20,12 @@ public class HistoriqueStatus {
     private Status status;
 
     @Column(name = "dateChangement")
-    private LocalDateTime dateChangement;
+    private LocalDate dateChangement;
 
     // Constructeurs
     public HistoriqueStatus() {}
 
-    public HistoriqueStatus(CompteCourant compteCourant, Status status, LocalDateTime dateChangement) {
+    public HistoriqueStatus(CompteCourant compteCourant, Status status, LocalDate dateChangement) {
         this.compteCourant = compteCourant;
         this.status = status;
         this.dateChangement = dateChangement;
@@ -41,6 +41,6 @@ public class HistoriqueStatus {
     public Status getStatus() { return status; }
     public void setStatus(Status status) { this.status = status; }
 
-    public LocalDateTime getDateChangement() { return dateChangement; }
-    public void setDateChangement(LocalDateTime dateChangement) { this.dateChangement = dateChangement; }
+    public LocalDate getDateChangement() { return dateChangement; }
+    public void setDateChangement(LocalDate dateChangement) { this.dateChangement = dateChangement; }
 }

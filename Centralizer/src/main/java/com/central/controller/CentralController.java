@@ -17,4 +17,9 @@ public class CentralController {
     public String Client(){
         return "client/acceuil";
     }
+
+    @GetMapping("comptecourant")
+    public String CompteCourant(){
+        return "courant/acceuil";
+    }
 }

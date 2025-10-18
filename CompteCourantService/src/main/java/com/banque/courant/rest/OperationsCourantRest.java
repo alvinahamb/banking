@@ -27,11 +27,11 @@ public class OperationsCourantRest {
     @Path("/create")
     public OperationsCourant create(OperationsCourant operation) { return service.create(operation); }
 
-    @PUT
+    @POST
     @Path("/update/{id}")
     public OperationsCourant update(OperationsCourant operation) { return service.update(operation); }
 
-    @DELETE
+    @GET
     @Path("/delete/{id}")
     public void delete(@PathParam("id") Long id) { service.delete(id); }
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Liste des types d'operation</h1>
+<a href="/comptecourant">Retour</a>
+<a href="/comptecourant/typeoperation/formulaire">Créer un nouveau type</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Libelle</th>
+        <th>Credit</th>
+    </tr>
+    <tr th:each="t : ${typeoperation}">
+        <td th:text="${t.idTypeOperation}"></td>
+        <td th:text="${t.libelle}"></td>
+        <td th:text="${t.credit}"></td>
+        <td>
+            <a th:href="@{/comptecourant/typeoperation/formulaire/{id}(id=${t.idTypeOperation})}">Update</a>
+        </td>
+        <td>
+        <a th:href="@{/comptecourant/typeoperation/delete/{id}(id=${t.idTypeOperation})}">Delete</a>
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>
