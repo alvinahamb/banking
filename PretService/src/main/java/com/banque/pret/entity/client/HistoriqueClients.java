@@ -1,6 +1,8 @@
 package com.banque.pret.entity.client;
 
 import jakarta.persistence.*;
+
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -19,13 +21,12 @@ public class HistoriqueClients {
     @JoinColumn(name = "idStatusClient")
     private StatusClient statusClient;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date date_changement;
+    private LocalDate date_changement;
 
     public HistoriqueClients() {
     }
 
-    public HistoriqueClients(Clients client, StatusClient statusClient, Date date_changement) {
+    public HistoriqueClients(Clients client, StatusClient statusClient,LocalDate date_changement) {
         this.client = client;
         this.statusClient = statusClient;
         this.date_changement = date_changement;
@@ -55,11 +56,11 @@ public class HistoriqueClients {
         this.statusClient = statusClient;
     }
 
-    public Date getDate_changement() {
+    public LocalDate getDate_changement() {
         return date_changement;
     }
 
-    public void setDate_changement(Date date_changement) {
+    public void setDate_changement(LocalDate date_changement) {
         this.date_changement = date_changement;
     }
 }

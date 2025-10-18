@@ -30,4 +30,14 @@ public class HistoriqueClientsRepository {
         }
         return false;
     }
+
+    public HistoriqueClients findLatestByClientId(Long clientId) {
+        List<HistoriqueClients> results = em.createQuery(
+                "SELECT h FROM HistoriqueClients h WHERE h.client.idClients = :clientId ORDER BY h.date_changement DESC",
+                HistoriqueClients.class)
+                .setParameter("clientId", clientId)
+                .setMaxResults(1)
+                .getResultList();
+        return results.isEmpty() ? null : results.get(0);
+    }
 }

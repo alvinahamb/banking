@@ -33,6 +33,12 @@
     <label>Taux maximum:</label>
     <input type="number" th:field="*{taux_max}" required /><br/>
 
+    <label>Duree minimum:</label>
+    <input type="number" th:field="*{duree_min}" required /><br/>
+
+    <label>Duree maximum:</label>
+    <input type="number" th:field="*{duree_max}" required /><br/>
+
     <button type="submit" th:text="${typePret.idTypePret} != null ? 'Modifier' : 'Créer'">Créer</button></form>
 
 <a href="/">← Retour à la liste</a>

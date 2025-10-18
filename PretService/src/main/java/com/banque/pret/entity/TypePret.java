@@ -17,9 +17,11 @@ public class TypePret {
     private double revenus_min;
     private int taux_min;
     private int taux_max;
+    private int duree_min;
+    private int duree_max;
 
     public TypePret(String libelle, double modalite, double montant_min, double montant_max, double revenus_min,
-                    int taux_min, int taux_max) {
+                    int taux_min, int taux_max, int duree_min, int duree_max) {
         this.libelle = libelle;
         this.modalite = modalite;
         this.montant_min = montant_min;
@@ -27,6 +29,8 @@ public class TypePret {
         this.revenus_min = revenus_min;
         this.taux_min = taux_min;
         this.taux_max = taux_max;
+        this.duree_min = duree_min;
+        this.duree_max = duree_max;
     }
 
     public TypePret() {
@@ -96,5 +100,21 @@ public class TypePret {
 
     public void setTaux_max(int taux_max) {
         this.taux_max = taux_max;
+    }
+
+    public int getDuree_min() {
+        return duree_min;
+    }
+
+    public void setDuree_min(int duree_min) {
+        this.duree_min = duree_min;
+    }
+
+    public int getDuree_max() {
+        return duree_max;
+    }
+
+    public void setDuree_max(int duree_max) {
+        this.duree_max = duree_max;
     }
 }

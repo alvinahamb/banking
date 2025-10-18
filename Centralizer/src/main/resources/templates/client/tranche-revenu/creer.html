@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1 th:text="${trancherevenu.idTranche} != null ? 'Modifier une tranche' : 'Créer une tranche'" >Créer une tranche</h1>
+<form th:action="@{${trancherevenu.idTranche} != null ? '/trancherevenu/update/' + ${trancherevenu.idTranche} : '/trancherevenu/create'}" 
+      th:object="${trancherevenu}" method="post">
+    
+    <label>Valeur minimum :</label>
+    <input type="number" th:field="*{valeur_min}" required /><br/>
+
+    <label>Valeur maximum :</label>
+    <input type="number" th:field="*{valeur_max}" required /><br/>
+  
+    <button type="submit" th:text="${trancherevenu.idTranche} != null ? 'Modifier' : 'Créer'">Créer</button></form>
+
+<a href="/trancherevenu/all">← Retour à la liste</a>
+</body>
+</html>

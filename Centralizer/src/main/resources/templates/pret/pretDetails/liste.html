@@ -30,7 +30,6 @@
         <td th:text="${t.date_valeur}"></td>
         <td th:text="${t.duree_mois}"></td>
         <td th:text="${t.taux}"></td>
-        <td th:text="${t.historiquePret.statusPret.libelle}"></td>
         <td><a th:href="@{'/historiques-pret/byPret/' + ${t.idPret}}">Voir Historique</a></td>
         <td><a th:href="@{'/echeances/pret/' + ${t.idPret}}">Voir Echeances</a></td>
         <td><a th:href="@{'/pret/remboursement/' + ${t.idPret}}">Remboursement</a></td>

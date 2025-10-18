@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Créer un type de prêt</title>
+</head>
+<body>
+<h1 th:text="${clients.idClient} != null ? 'Modifier un client' : 'Créer un client'" >Créer un client</h1>
+<form th:action="@{${clients.idClient} != null ? '/clients/update/' + ${clients.idClient} : '/clients/create'}" 
+      th:object="${clients}" method="post">
+    
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" th:field="*{nom}" /><br/>
+
+    <label for="prenoms">Prénoms:</label>
+    <input type="text" id="prenoms" th:field="*{prenoms}" /><br/>
+
+    <label for="date_de_naissance">Date de naissance:</label>
+    <input type="date" id="date_de_naissance" th:field="*{date_de_naissance}" /><br/>
+
+    <label for="lieu_de_naissance">Lieu de naissance:</label>
+    <input type="text" id="lieu_de_naissance" th:field="*{lieu_de_naissance}" /><br/>
+
+    <label for="numero_identite">Numéro d'identité:</label>
+    <input type="text" id="numero_identite" th:field="*{numero_identite}" /><br/>
+
+    <label for="adresse">Adresse:</label>
+    <input type="text" id="adresse" th:field="*{adresse}"
+    /><br/>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" th:field="*{email}"
+    /><br/>
+
+    <label for="telephone">Téléphone:</label>
+    <input type="text" id="telephone" th:field="*{telephone}"
+    /><br/>
+
+    <label for="revenuActuel">Revenu actuel:</label>
+   <label for="revenuActuel">Revenu actuel:</label>
+<select name="trancheRevenu" th:field="*{revenuActuel.idTranche}">
+    <option value="">-- Sélectionner une tranche --</option>
+    <option th:each="t : ${trancherevenu}"
+            th:value="${t.idTranche}"
+            th:text="|${t.valeur_min} - ${t.valeur_max}|">
+    </option>
+</select>
+
+    
+    <button type="submit" th:text="${clients.idClient} != null ? 'Modifier' : 'Créer'">Créer</button></form>
+
+<a href="/clients/all">← Retour à la liste</a>
+</body>
+</html>

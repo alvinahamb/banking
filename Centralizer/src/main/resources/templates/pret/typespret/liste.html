@@ -18,6 +18,8 @@
         <th>Revenus min</th>
         <th>Taux min</th>
         <th>Taux max</th>
+        <th>Duree min</th>
+        <th>Duree max</th>
     </tr>
     <tr th:each="t : ${typespret}">
         <td th:text="${t.idTypePret}"></td>
@@ -28,6 +30,8 @@
         <td th:text="${t.revenus_min}"></td>
         <td th:text="${t.taux_min}"></td>
         <td th:text="${t.taux_max}"></td>
+         <td th:text="${t.duree_min}"></td>
+        <td th:text="${t.duree_max}"></td>
         <td>
             <a th:href="@{/types-pret/formulaire/{id}(id=${t.idTypePret})}">Update</a>
         </td>

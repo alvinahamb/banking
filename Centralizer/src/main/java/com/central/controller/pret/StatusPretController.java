@@ -2,8 +2,6 @@ package com.central.controller.pret;
 
 import com.central.service.pret.StatusPretService;
 
-import jakarta.websocket.server.PathParam;
-
 import com.central.model.pret.StatusPret;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

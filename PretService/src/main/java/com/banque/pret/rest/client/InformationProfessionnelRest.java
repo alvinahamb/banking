@@ -27,7 +27,7 @@ public class InformationProfessionnelRest {
     @Path("/create")
     public InformationProfessionnel create(InformationProfessionnel i) { return service.create(i); }
 
-    @GET
+    @POST
     @Path("/update/{id}")
     public InformationProfessionnel update(InformationProfessionnel i) { return service.update(i); }
 

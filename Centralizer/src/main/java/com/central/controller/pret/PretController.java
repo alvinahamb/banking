@@ -2,6 +2,8 @@ package com.central.controller.pret;
 
 import com.central.service.pret.*;
 import com.central.model.pret.*;
+import com.central.service.client.*;
+import com.central.model.client.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -17,12 +19,14 @@ public class PretController {
     private final PretService service;
     private final TypePretService typepretservice;
     private final HistoriquePretService histoService;
+    private final ClientsService clientsService;
     String view = "pret/pretDetails";
 
-    public PretController(PretService service, TypePretService typepretservice, HistoriquePretService histoService) {
+    public PretController(PretService service, TypePretService typepretservice, HistoriquePretService histoService, ClientsService clientsService) {
         this.service = service;
         this.typepretservice = typepretservice;
         this.histoService = histoService;
+        this.clientsService = clientsService;
     }
 
     @GetMapping("/all")
@@ -50,6 +54,12 @@ public class PretController {
     public String createForm(@ModelAttribute Pret pret, Model model) {
         pret.setIdPret(null);
         TypePret typePret = typepretservice.getById(pret.getTypePret().getIdTypePret());
+        Clients client = clientsService.getById(pret.getIdClient().longValue());
+        if (client == null) {
+            model.addAttribute("mess", "Client inexistant.");
+            model.addAttribute("typepret", typepretservice.getAll());
+            return view + "/creer";
+        }
         pret.setDate_operation(LocalDate.now().toString());
         pret.setDate_valeur(LocalDate.now().toString());
 
@@ -64,8 +74,17 @@ public class PretController {
             model.addAttribute("typepret", typepretservice.getAll());
             return view + "/creer";
         }
-        // miss 
+        if (pret.getDuree_mois() < typePret.getDuree_min() || pret.getDuree_mois() > typePret.getDuree_max()) {
+            model.addAttribute("mess", "Durée hors limites pour ce type de prêt.");
+            model.addAttribute("typepret", typepretservice.getAll());
+            return view + "/creer";
+        }
         // conditions sur les revenus
+        if (client.getRevenuActuel().getValeur_max() < typePret.getRevenus_min()) {
+            model.addAttribute("mess", "Revenus insuffisants pour ce type de prêt.");
+            model.addAttribute("typepret", typepretservice.getAll());
+            return view + "/creer";
+        }
         service.create(pret);
         model.addAttribute("pret", service.getAll());
         // model.addAttribute("mess", pret.getDate_operation());

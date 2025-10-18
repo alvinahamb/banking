@@ -27,7 +27,7 @@ public class TrancheRevenuRest {
     @Path("/create")
     public TrancheRevenu create(TrancheRevenu t) { return service.create(t); }
 
-    @GET
+    @POST
     @Path("/update/{id}")
     public TrancheRevenu update(TrancheRevenu t) { return service.update(t); }
 

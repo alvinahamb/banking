@@ -1,7 +1,8 @@
 package com.banque.pret.entity.client;
 
 import jakarta.persistence.*;
-import java.util.Date;
+
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "InformationProfessionel")
@@ -12,7 +13,8 @@ public class InformationProfessionnel {
     private Long idInfo;
 
     private String emploi;
-    private Date date_changement;
+    
+    private LocalDate date_changement;
 
     @ManyToOne
     @JoinColumn(name = "idTranche", nullable = false)
@@ -25,7 +27,7 @@ public class InformationProfessionnel {
     public InformationProfessionnel() {
     }
 
-    public InformationProfessionnel(String emploi, Date date_changement, TrancheRevenu tranche, Clients client) {
+    public InformationProfessionnel(String emploi, LocalDate date_changement, TrancheRevenu tranche, Clients client) {
         this.emploi = emploi;
         this.date_changement = date_changement;
         this.tranche = tranche;
@@ -48,11 +50,11 @@ public class InformationProfessionnel {
         this.emploi = emploi;
     }
 
-    public Date getDate_changement() {
+    public LocalDate getDate_changement() {
         return date_changement;
     }
 
-    public void setDate_changement(Date date_changement) {
+    public void setDate_changement(LocalDate date_changement) {
         this.date_changement = date_changement;
     }
 

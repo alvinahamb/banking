@@ -27,7 +27,7 @@ public class StatusClientRest {
     @Path("/create")
     public StatusClient create(StatusClient s) { return service.create(s); }
 
-    @GET
+    @POST
     @Path("/update/{id}")
     public StatusClient update(StatusClient s) { return service.update(s); }
 

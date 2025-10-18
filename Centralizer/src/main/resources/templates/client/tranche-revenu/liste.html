@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<h1>Liste des tranches de revenu</h1>
+<a href="/client">Retour</a>
+<a href="/trancherevenu/formulaire">Créer une nouvelle tranche</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Valeur minumum</th>
+        <th>Valeur maximum</th>
+    </tr>
+    <tr th:each="t : ${trancherevenu}">
+        <td th:text="${t.idTranche}"></td>
+        <td th:text="${t.valeur_min}"></td>
+        <td th:text="${t.valeur_max}"></td>
+        <td>
+            <a th:href="@{/trancherevenu/formulaire/{id}(id=${t.idTranche})}">Update</a>
+        </td>
+        <td>
+        <a th:href="@{/trancherevenu/delete/{id}(id=${t.idTranche})}">Delete</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

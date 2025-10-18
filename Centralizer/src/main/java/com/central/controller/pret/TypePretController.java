@@ -32,8 +32,8 @@ public class TypePretController {
     @PostMapping("/create")
     public String createForm(@ModelAttribute TypePret typePret,Model model) {
         typePret.setIdTypePret(null);
-        // System.out.println("message");
-        // System.out.println(typePret.getTaux_max()+"ok");
+        System.out.println("message");
+        System.out.println(typePret.getDuree_max()+"ok");
         service.create(typePret);
         model.addAttribute("typespret", service.getAll());
         return view + "/liste";

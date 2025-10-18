@@ -21,4 +21,8 @@ public class HistoriqueClientsService {
     public HistoriqueClients update(HistoriqueClients h) { return repo.update(h); }
 
     public boolean delete(Long id) { return repo.delete(id); }
+
+    public HistoriqueClients getLatestByClientId(Long clientId) {
+        return repo.findLatestByClientId(clientId);
+    }
 }

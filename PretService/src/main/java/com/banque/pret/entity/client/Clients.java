@@ -1,7 +1,7 @@
 package com.banque.pret.entity.client;
 
 import jakarta.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "Clients")
@@ -13,13 +13,13 @@ public class Clients {
 
     private String nom;
     private String prenoms;
-    private Date date_de_naissance;
+    private LocalDate date_de_naissance;
     private String lieu_de_naissance;
     private String adresse;
     private String telephone;
     private String email;
     private String numero_identite;
-    private Date date_ajout;
+    private LocalDate date_ajout;
 
     @ManyToOne
     @JoinColumn(name = "idTranche", nullable = false)
@@ -28,9 +28,9 @@ public class Clients {
     public Clients() {
     }
 
-    public Clients(String nom, String prenoms, Date date_de_naissance, String lieu_de_naissance,
+    public Clients(String nom, String prenoms, LocalDate date_de_naissance, String lieu_de_naissance,
                    String adresse, String telephone, String email, String numero_identite,
-                   Date date_ajout, TrancheRevenu revenuActuel) {
+                   LocalDate date_ajout, TrancheRevenu revenuActuel) {
         this.nom = nom;
         this.prenoms = prenoms;
         this.date_de_naissance = date_de_naissance;
@@ -68,11 +68,11 @@ public class Clients {
         this.prenoms = prenoms;
     }
 
-    public Date getDate_de_naissance() {
+    public LocalDate getDate_de_naissance() {
         return date_de_naissance;
     }
 
-    public void setDate_de_naissance(Date date_de_naissance) {
+    public void setDate_de_naissance(LocalDate date_de_naissance) {
         this.date_de_naissance = date_de_naissance;
     }
 
@@ -116,11 +116,11 @@ public class Clients {
         this.numero_identite = numero_identite;
     }
 
-    public Date getDate_ajout() {
+    public LocalDate getDate_ajout() {
         return date_ajout;
     }
 
-    public void setDate_ajout(Date date_ajout) {
+    public void setDate_ajout(LocalDate date_ajout) {
         this.date_ajout = date_ajout;
     }
 

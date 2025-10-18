@@ -27,7 +27,7 @@ public class ClientsRest {
     @Path("/create")
     public Clients create(Clients c) { return service.create(c); }
 
-    @GET
+    @POST
     @Path("/update/{id}")
     public Clients update(Clients c) { return service.update(c); }
 

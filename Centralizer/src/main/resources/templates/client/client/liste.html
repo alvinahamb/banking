@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des clients</title>
+</head>
+<body>
+<h1>Liste des clients</h1>
+
+<a href="/client">Retour</a> |
+<a href="/clients/formulaire">Créer un nouveau client</a>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénoms</th>
+            <th>Date de naissance</th>
+            <th>Email</th>
+            <th>Date d'ajout</th>
+            <th>Revenu actuel</th>
+            <th>Actions</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="t : ${clients}">
+            <td th:text="${t.idClient}"></td>
+            <td th:text="${t.nom}"></td>
+            <td th:text="${t.prenoms}"></td>
+            <td th:text="${t.date_de_naissance}"></td>
+            <td th:text="${t.email}"></td>
+            <td th:text="${t.date_ajout}"></td>
+            <td th:text="|${t.revenuActuel.valeur_min} - ${t.revenuActuel.valeur_max}|"></td>
+            <td>
+                <a th:href="@{/clients/formulaire/{id}(id=${t.idClient})}">Modifier</a> |
+                <a th:href="@{/clients/delete/{id}(id=${t.idClient})}">Supprimer</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
