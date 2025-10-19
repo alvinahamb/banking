@@ -35,7 +35,7 @@ public class TauxController {
     @PostMapping("/create")
     public String create(@ModelAttribute Taux taux) {
         taux.setIdTaux(0L);
-        taux.setDateChangement(LocalDate.now().toString());
+        taux.setDateChangement(taux.getDateChangement().toString());
         service.add(taux);
         return "redirect:/compte/taux/all";
     }

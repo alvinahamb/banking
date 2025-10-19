@@ -17,7 +17,7 @@ public class EcheanceService {
         return Arrays.asList(echeances);
     }
 
-    public Echeance getById(int id) {
+    public Echeance getById(Long id) {
         return restTemplate.getForObject(url + "/" + id, Echeance.class);
     }
 
@@ -25,16 +25,20 @@ public class EcheanceService {
         return restTemplate.postForObject(url + "/create", echeance, Echeance.class);
     }
 
-    public void update(int id, Echeance echeance) {
+    public void update(Long id, Echeance echeance) {
         restTemplate.postForObject(url + "/update/" + id, echeance, Echeance.class);
     }
 
-    public void delete(int id) {
+    public void delete(Long id) {
         restTemplate.getForObject(url + "/delete/" + id, Void.class);
     }
 
-    public List<Echeance> getByPret(int idPret) {
+    public List<Echeance> getByPret(Long idPret) {
         Echeance[] echeances = restTemplate.getForObject(url + "/byPret/" + idPret, Echeance[].class);
         return Arrays.asList(echeances);
+    }
+
+    public Echeance lastUnpaidEcheance(Long id){
+        return restTemplate.getForObject(url + "/lastEnCours/"+id, Echeance.class);
     }
 }

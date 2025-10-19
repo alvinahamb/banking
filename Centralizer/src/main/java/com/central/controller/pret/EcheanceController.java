@@ -27,7 +27,7 @@ public class EcheanceController {
     }
 
     @GetMapping("/pret/{idPret}")
-    public String getByPret(@PathVariable int idPret, Model model) {
+    public String getByPret(@PathVariable Long idPret, Model model) {
         List<Echeance> echeances = service.getByPret(idPret);
         model.addAttribute("echeances", echeances);
         model.addAttribute("idPret", idPret);

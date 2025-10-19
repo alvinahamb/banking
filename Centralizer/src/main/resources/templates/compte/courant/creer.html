@@ -16,6 +16,10 @@
     </select>
     <br/>
 
+    <label>Date ajout: </label>
+    <input type="date" id="date_de_naissance" th:field="*{dateOuverture}" /><br/>
+
+
     <button type="submit" th:text="${comptecourant.idCompteCourant} != null ? 'Modifier' : 'Créer'">Créer</button></form>
 
 <a href="/">← Retour à la liste</a>

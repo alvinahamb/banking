@@ -56,10 +56,10 @@ public class HistoriqueVirementController {
         TypeOperation to1 = new TypeOperation();
         TypeOperation to2 = new TypeOperation();
         for (TypeOperation typeOperation : listes) {
-            if (typeOperation.getLibelle().equals("Virement emis")) {
+            if (typeOperation.getLibelle().equals("virement emis")) {
                 to1 = typeOperation;
             }
-            if (typeOperation.getLibelle().equals("Virement recu")) {
+            if (typeOperation.getLibelle().equals("virement recu")) {
                 to2 = typeOperation;
             }
         }
@@ -84,7 +84,7 @@ public class HistoriqueVirementController {
         if (type1.equals("D")) {
             System.out.println("d");
             CompteDepot source = depot.getById(id1);
-            double moitie = source.getSoldeActuel()/2;
+            double moitie = source.getSoldeActuel() / 2;
             double reste = source.getSoldeActuel() - montant;
             System.out.println(reste);
             System.out.println(moitie);
@@ -97,7 +97,7 @@ public class HistoriqueVirementController {
         // add virement
         h.setIdOperation1(0L);
         h.setIdOperation2(0L);
-        h.setDateVirement(LocalDate.now().toString());
+        h.setDateVirement(h.getDateVirement().toString());
         HistoriqueVirement newHistoriqueVirement = service.create(h);
 
         // Source
@@ -107,8 +107,8 @@ public class HistoriqueVirementController {
             double solde = source.getSoldeActuel() - montant;
             source.setSoldeActuel(solde);
             OperationsCourant operation = new OperationsCourant(null, montant,
-                    LocalDate.now().toString(),
-                    LocalDate.now().toString(), solde, newHistoriqueVirement, to1, source);
+                    h.getDateVirement(),
+                    h.getDateVirement(), solde, newHistoriqueVirement, to1, source);
             courant.update(id1, source);
             operationcourant.create(operation);
         }
@@ -122,8 +122,8 @@ public class HistoriqueVirementController {
                     to1.getLibelle(),
                     to1.getCredit());
             OperationsDepot operation = new OperationsDepot(0L, montant,
-                    LocalDate.now().toString(),
-                    LocalDate.now().toString(), solde, newHistoriqueVirement.getIdVirement(),
+                    h.getDateVirement(),
+                    h.getDateVirement(), solde, newHistoriqueVirement.getIdVirement(),
                     tod.getIdTypeOperation(),
                     source.getIdCompteDepot(), null, null);
             depot.update(source);
@@ -136,8 +136,8 @@ public class HistoriqueVirementController {
             double solde = source.getSoldeActuel() + montant;
             source.setSoldeActuel(solde);
             OperationsCourant operation = new OperationsCourant(null, montant,
-                    LocalDate.now().toString(),
-                    LocalDate.now().toString(), solde, newHistoriqueVirement, to2, source);
+                    h.getDateVirement(),
+                    h.getDateVirement(), solde, newHistoriqueVirement, to2, source);
             courant.update(id2, source);
             operationcourant.create(operation);
         }
@@ -150,8 +150,8 @@ public class HistoriqueVirementController {
                     to2.getLibelle(),
                     to2.getCredit());
             OperationsDepot operation = new OperationsDepot(0L, montant,
-                    LocalDate.now().toString(),
-                    LocalDate.now().toString(), solde, newHistoriqueVirement.getIdVirement(),
+                    h.getDateVirement(),
+                    h.getDateVirement(), solde, newHistoriqueVirement.getIdVirement(),
                     tod.getIdTypeOperation(),
                     source.getIdCompteDepot(), null, null);
             depot.update(source);

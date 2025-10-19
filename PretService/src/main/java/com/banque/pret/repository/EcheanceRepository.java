@@ -43,4 +43,20 @@ public class EcheanceRepository {
                 .setParameter("idPret", idPret)
                 .getResultList();
     }
+
+    public Echeance findFirstNonPayeByPret(Long idPret) {
+    List<Echeance> result = em.createQuery(
+        "SELECT e FROM Echeance e JOIN e.statusPret s " +
+        "WHERE e.pret.idPret = :idPret AND s.libelle = :libelle " +
+        "ORDER BY e.date_echance ASC",
+        Echeance.class)
+        .setParameter("idPret", idPret)
+        .setParameter("libelle", "non paye")
+        .setMaxResults(1)
+        .getResultList();
+
+    return result.isEmpty() ? null : result.get(0);
+}
+
+
 }

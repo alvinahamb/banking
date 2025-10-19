@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+       <style>
+        .hidden {
+            display: none;
+        }
+        select, input[type="number"] {
+            width: 100%;
+            max-width: 400px;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Effectuer un remboursement</h1>
+<p th:text="${mess}">ok</p>
+<form th:action="@{'/pret/reboursement/paiement/' + ${echeance.idEcheance}}" 
+      th:object="${remboursement}" method="post">
+<div class="form-section">
+    <p>Vous allez payer l'echeance du <span th:text="${echeance.date_echance}"> montant <span th:text="${echeance.annuite}" ></span></p>
+        <h3>Choix compte pour rembourser:</h3>
+        <label>
+            <input type="checkbox" id="checkDepotSource" onchange="toggleSelect('selectDepotSource', this)">
+            Dépôt
+        </label>
+        <label>
+            <input type="checkbox" id="checkCourantSource" onchange="toggleSelect('selectCourantSource', this)">
+            Courant
+        </label>
+
+        <div id="selectDepotSource" class="hidden">
+            <label>Compte Dépôt:</label>
+            <select th:field="*{numero_compte}" required>
+                <option value="">-- Sélectionnez un compte --</option>
+                <option th:each="c : ${comptedepot}" 
+                        th:value="${c.numeroCompte}" 
+                        th:text="${c.numeroCompte} + ' - Solde: ' + ${c.soldeActuel}">Compte</option>
+            </select>
+        </div>
+
+        <div id="selectCourantSource" class="hidden">
+            <label>Compte Courant:</label>
+            <select th:field="*{numero_compte}" required>
+                <option value="">-- Sélectionnez un compte --</option>
+                <option th:each="c : ${comptecourant}" 
+                        th:value="${c.numeroCompte}" 
+                        th:text="${c.numeroCompte} + ' - Solde: ' + ${c.soldeActuel}">Compte</option>
+            </select>
+        </div>
+    </div>
+
+    <label>Montant:</label>
+    <input type="number" th:field="*{montant}" step="0.01" min="0" required>
+    <br/>
+
+    <label>Date: </label>
+    <input type="date" th:field="*{date_remboursement}" /><br/>
+    <button type="submit">Rembourser</button>
+
+<a href="/">← Retour à la liste</a>
+
+<script>
+    function toggleSelect(selectId, checkbox) {
+        const selectDiv = document.getElementById(selectId);
+        const select = selectDiv.querySelector('select');
+        
+        if (checkbox.checked) {
+            selectDiv.classList.remove('hidden');
+            select.required = true;
+            select.disabled = false;
+            
+            // Décocher l'autre checkbox du même groupe
+            const isSource = selectId.includes('Source');
+            if (isSource) {
+                if (selectId.includes('Depot')) {
+                    document.getElementById('checkCourantSource').checked = false;
+                    const otherDiv = document.getElementById('selectCourantSource');
+                    otherDiv.classList.add('hidden');
+                    otherDiv.querySelector('select').required = false;
+                    otherDiv.querySelector('select').disabled = true;
+                } else {
+                    document.getElementById('checkDepotSource').checked = false;
+                    const otherDiv = document.getElementById('selectDepotSource');
+                    otherDiv.classList.add('hidden');
+                    otherDiv.querySelector('select').required = false;
+                    otherDiv.querySelector('select').disabled = true;
+                }
+            } else {
+                if (selectId.includes('Depot')) {
+                    document.getElementById('checkCourantDest').checked = false;
+                    const otherDiv = document.getElementById('selectCourantDest');
+                    otherDiv.classList.add('hidden');
+                    otherDiv.querySelector('select').required = false;
+                    otherDiv.querySelector('select').disabled = true;
+                } else {
+                    document.getElementById('checkDepotDest').checked = false;
+                    const otherDiv = document.getElementById('selectDepotDest');
+                    otherDiv.classList.add('hidden');
+                    otherDiv.querySelector('select').required = false;
+                    otherDiv.querySelector('select').disabled = true;
+                }
+            }
+        } else {
+            selectDiv.classList.add('hidden');
+            select.required = false;
+            select.disabled = true;
+        }
+    }
+</script>
+</body>
+</html>

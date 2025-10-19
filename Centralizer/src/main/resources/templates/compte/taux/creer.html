@@ -12,6 +12,9 @@
     <input type="number" id="valeur" name="libelle" th:field="*{valeur}" required />
     <br/><br/>
 
+    <label>Date ajout: </label>
+    <input type="date"  th:field="*{dateChangement}" /><br/>
+
     <button type="submit" th:text="${taux.idTaux} != null ? 'Modifier' : 'Créer'">Créer</button></form>
 
 <a href="/">← Retour à la liste</a>

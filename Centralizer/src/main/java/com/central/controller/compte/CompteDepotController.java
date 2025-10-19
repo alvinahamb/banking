@@ -50,8 +50,8 @@ public class CompteDepotController {
         comptedepot.setIdCompteDepot(0L);
         comptedepot.setSoldeActuel(0.0);
         comptedepot.setNumeroCompte("D" + (service.getAll().size() + 1));
-        comptedepot.setDateOuverture(LocalDate.now().toString());
-        comptedepot.setDateCloture(LocalDate.now().toString());
+        comptedepot.setDateOuverture(comptedepot.getDateOuverture().toString());
+        comptedepot.setDateCloture(comptedepot.getDateOuverture());
         System.out.println(comptedepot.getIdClient());
         service.add(comptedepot);
         return "redirect:/comptedepot/all";
@@ -97,8 +97,8 @@ public class CompteDepotController {
         operationsdepot.setIdTypeOperation(typeOp.getIdTypeOperation());
         typeOp.setIdTypeOperation(0L);
         operationsdepot.setTypeOperation(typeOp);
-        operationsdepot.setDateOperation(LocalDate.now().toString());
-        operationsdepot.setDateValeur(LocalDate.now().toString());
+        operationsdepot.setDateOperation(operationsdepot.getDateOperation().toString());
+        operationsdepot.setDateValeur(operationsdepot.getDateOperation());
 
         // Calculate new balance
         double nouveauSolde = 0.0;

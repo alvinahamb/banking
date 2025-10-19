@@ -25,9 +25,9 @@ public class PretService {
         repo.save(p);
 
         // Historique
-        StatusPret statusPret = statusRepo.findByLibelle("en cours");
-        HistoriquePret historiquePret = new HistoriquePret(p, statusPret, LocalDate.now());
-        histoRepo.save(historiquePret);
+        // StatusPret statusPret = statusRepo.findByLibelle("en cours");
+        // HistoriquePret historiquePret = new HistoriquePret(p, statusPret, LocalDate.now());
+        // histoRepo.save(historiquePret);
 
         // Création des échéances
         TypePret typePret = typePretRepo.find((Long) p.getTypePret().getIdTypePret());
@@ -47,13 +47,16 @@ public class PretService {
             double capitalDebutArrondi = round(capital_debut);
             double annuiteArrondie = round(annuite);
 
+            // Calcul de la date d'échéance
+            LocalDate dateEcheance = p.getDate_operation().plusMonths((long) (modalite_mois * (i + 1)));
+            
             Echeance echeance = new Echeance(
                     capitalDebutArrondi,
                     interet,
                     amortissement,
                     annuiteArrondie,
                     capital_fin,
-                    LocalDate.now(),
+                    dateEcheance,
                     p,
                     statusEcheance);
             echeanceRepo.save(echeance);

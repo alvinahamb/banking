@@ -40,4 +40,10 @@ public class EcheanceRest {
     public List<Echeance> getEcheancesByPret(@PathParam("id") Long idPret) {
         return service.getByPretId(idPret);
     }
+
+    @GET
+    @Path("/lastEnCours/{idPret}")
+    public Echeance getLastEcheanceEnCours(@PathParam("idPret") Long idPret) {
+        return service.getLastEcheanceEnCours(idPret);
+    }
 }

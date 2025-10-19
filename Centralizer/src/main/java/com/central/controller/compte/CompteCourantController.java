@@ -41,7 +41,7 @@ public class CompteCourantController {
     public String create(@ModelAttribute CompteCourant comptecourant) {
         comptecourant.setSoldeActuel(0.0);
         comptecourant.setNumeroCompte("C" + (service.getAll().size() + 1));
-        comptecourant.setDateOuverture(LocalDate.now().toString());
+        comptecourant.setDateOuverture(comptecourant.getDateOuverture().toString());
         comptecourant.setDateCloture(null);
         System.out.println(comptecourant.getIdClient());
         service.create(comptecourant);
@@ -71,8 +71,8 @@ public class CompteCourantController {
             return "redirect:/comptecourant/transaction/" + compte.getIdCompteCourant() + "?error=insufficient_funds";
         }
         operationscourant.setTypeOperation(typeOp);
-        operationscourant.setDateOperation(LocalDate.now().toString());
-        operationscourant.setDateValeur(LocalDate.now().toString());
+        operationscourant.setDateOperation(operationscourant.getDateOperation().toString());
+        operationscourant.setDateValeur(operationscourant.getDateOperation());
         if (typeOp.getCredit()==false) {
             double solde = compte.getSoldeActuel() - operationscourant.getMontant();
             operationscourant.setSoldeActuel(solde);

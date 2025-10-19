@@ -42,8 +42,9 @@ public class ClientsController {
     @PostMapping("/create")
     public String create(@ModelAttribute Clients clients) {
         clients.setDate_de_naissance(clients.getDate_de_naissance().toString());
-        clients.setDate_ajout(LocalDate.now().toString());
+        clients.setDate_ajout(clients.getDate_ajout().toString());
         TrancheRevenu trancheRevenu = trancherevenu.getById(clients.getRevenuActuel().getIdTranche());
+        System.out.println(trancheRevenu.getIdTranche());
         clients.setRevenuActuel(trancheRevenu);
         service.create(clients);
         return "redirect:/clients/all";

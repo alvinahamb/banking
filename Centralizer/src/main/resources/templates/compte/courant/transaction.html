@@ -21,6 +21,10 @@
     <input type="number" th:field="*{montant}" required/>
     <br/>
     <input type="hidden" th:field="*{compteCourant.idCompteCourant}"/>
+    <br/>
+
+    <label>Date operation: </label>
+    <input type="date" th:field="*{dateOperation}" /><br/>
 
     <button type="submit">Valider</button></form>
 

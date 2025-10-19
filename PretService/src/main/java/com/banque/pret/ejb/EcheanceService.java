@@ -36,4 +36,9 @@ public class EcheanceService {
     public List<Echeance> getByPretId(Long idPret) {
         return repo.findByPretId(idPret);
     }
+
+    public Echeance getLastEcheanceEnCours(Long idPret) {
+        return repo.findFirstNonPayeByPret(idPret);
+    }
+
 }

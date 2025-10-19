@@ -36,17 +36,18 @@
     <input type="text" id="telephone" th:field="*{telephone}"
     /><br/>
 
-    <label for="revenuActuel">Revenu actuel:</label>
-   <label for="revenuActuel">Revenu actuel:</label>
-<select name="trancheRevenu" th:field="*{revenuActuel.idTranche}">
-    <option value="">-- Sélectionner une tranche --</option>
-    <option th:each="t : ${trancherevenu}"
-            th:value="${t.idTranche}"
-            th:text="|${t.valeur_min} - ${t.valeur_max}|">
-    </option>
-</select>
+    <label>Date d'ajout:</label>
+    <input type="date"th:field="*{date_ajout}" /><br/>
 
-    
+   <label for="revenuActuel">Revenu actuel:</label>
+    <select name="trancheRevenu" th:field="*{revenuActuel.idTranche}">
+        <option value="">-- Sélectionner une tranche --</option>
+        <option th:each="t : ${trancherevenu}"
+                th:value="${t.idTranche}"
+                th:text="|${t.valeur_min} - ${t.valeur_max}|">
+        </option>
+    </select>
+ 
     <button type="submit" th:text="${clients.idClient} != null ? 'Modifier' : 'Créer'">Créer</button></form>
 
 <a href="/clients/all">← Retour à la liste</a>

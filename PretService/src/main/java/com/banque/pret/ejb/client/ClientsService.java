@@ -17,8 +17,6 @@ public class ClientsService {
     private InformationProfessionnelRepository infoProRepo;
 
     public Clients create(Clients c) {
-        InformationProfessionnel info = new InformationProfessionnel("", null, c.getrevenuActuel(), c);
-        infoProRepo.save(info);
         repo.save(c);
         return c;
     }
