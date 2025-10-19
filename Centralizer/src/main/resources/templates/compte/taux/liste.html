@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Liste des comptes</h1>
+<a href="/comptecourant">Retour</a>
+<a href="/compte/taux/formulaire">Créer un nouveau taux</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Valeur</th>
+        <th>Date changement</th>
+    </tr>
+    <tr th:each="t : ${taux}">
+        <td th:text="${t.idTaux}"></td>
+        <td th:text="${t.valeur}"></td>
+        <td th:text="${t.dateChangement}"></td>
+        <td>
+            <a th:href="@{/compte/taux/formulaire/{id}(id=${t.idTaux})}">Update</a>
+        </td>
+        <td>
+        <a th:href="@{/compte/taux/delete/{id}(id=${t.idTaux})}">Delete</a>
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>

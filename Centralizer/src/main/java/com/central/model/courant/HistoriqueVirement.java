@@ -1,22 +1,21 @@
 package com.central.model.courant;
 
-import java.time.LocalDate;
-
 public class HistoriqueVirement {
 
     private Long idVirement;
     private Long idOperation1;
     private Long idOperation2;
+    
     private double montant;
     private String numeroCompteSource;
     private String numeroCompteDestination;
-    private LocalDate dateVirement;
+    private String dateVirement;
 
     // Constructeurs
     public HistoriqueVirement() {}
 
     public HistoriqueVirement(Long idVirement, double montant, String numeroCompteSource,
-                              String numeroCompteDestination, LocalDate dateVirement,
+                              String numeroCompteDestination, String dateVirement,
                               Long idOperation1, Long idOperation2) {
         this.idVirement = idVirement;
         this.montant = montant;
@@ -40,8 +39,8 @@ public class HistoriqueVirement {
     public String getNumeroCompteDestination() { return numeroCompteDestination; }
     public void setNumeroCompteDestination(String numeroCompteDestination) { this.numeroCompteDestination = numeroCompteDestination; }
 
-    public LocalDate getDateVirement() { return dateVirement; }
-    public void setDateVirement(LocalDate dateVirement) { this.dateVirement = dateVirement; }
+    public String getDateVirement() { return dateVirement; }
+    public void setDateVirement(String dateVirement) { this.dateVirement = dateVirement; }
 
     public Long getIdOperation1() { return idOperation1; }
     public void setIdOperation1(Long idOperation1) { this.idOperation1 = idOperation1; }

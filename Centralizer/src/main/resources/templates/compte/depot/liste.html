@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Liste des comptes</h1>
+<a href="/comptecourant">Retour</a>
+<a href="/comptedepot/formulaire">Créer un nouveau compte depot</a>
+<p th:text="${success}"></p>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Numéro de compte</th>
+        <th>ID Client</th>
+        <th>Solde actuel</th>
+        <th>Date d'ouverture</th>
+        <th>Taux</th>
+    </tr>
+    <tr th:each="t : ${comptedepot}">
+        <td th:text="${t.idCompteDepot}"></td>
+        <td th:text="${t.numeroCompte}"></td>
+        <td th:text="${t.idClient}"></td>
+        <td th:text="${t.soldeActuel}"></td>
+        <td th:text="${t.dateOuverture}"></td>
+        <td th:text="${t.taux.valeur}"></td>
+        <td>
+            <a th:href="@{/comptedepot/transaction/{id}(id=${t.idCompteDepot})}">Effectuer un transaction</a>
+        </td>
+        <!--/* 
+            <td>
+                <a th:href="@{/comptecourant/formulaire/{id}(id=${t.idCompteDepot})}">Update</a>
+            </td>
+            <td>
+            <a th:href="@{/comptecourant/delete/{id}(id=${t.idCompteDepot})}">Delete</a>
+            </td>
+        */-->
+    </tr>
+</table>
+</body>
+</html>

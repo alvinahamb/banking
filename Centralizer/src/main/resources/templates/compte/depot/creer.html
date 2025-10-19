@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1 th:text="${comptedepot.IdCompteDepot} != null ? 'Modifier' : 'Créer'" >Créer un compte</h1>
+<form th:action="@{${comptedepot.IdCompteDepot} != null ? '/comptedepot/update/' + ${comptedepot.IdCompteDepot} : '/comptedepot/create'}" 
+      th:object="${comptedepot}" method="post">
+    
+    <label>Client :</label>
+    <select th:field="*{idClient}" required>
+        <option th:each="client : ${clients}" 
+                th:value="${client.idClient}" 
+                th:text="${client.nom} + ' ' + ${client.prenoms}">Client Name</option>
+    </select>
+    <br/>
+
+    <select th:field="*{idTaux}" required>
+        <option th:each="t : ${taux}" 
+                th:value="${t.idTaux}" 
+                th:text="${t.valeur} + ' %'">Taux</option>
+    </select>
+
+
+    <button type="submit" th:text="${comptedepot.IdCompteDepot} != null ? 'Modifier' : 'Créer'">Créer</button></form>
+
+<a href="/">← Retour à la liste</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Liste des virements</h1>
+<a href="/comptecourant">Retour</a>
+<a href="/compte/virement/formulaire">Effectuer un virement</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>montant</th>
+        <th>numeroCompteSource</th>
+        <th>numeroCompteDestination</th>
+        <th>dateVirement</th>
+    </tr>
+    <tr th:each="t : ${virement}">
+        <td th:text="${t.idVirement}"></td>
+        <td th:text="${t.montant}"></td>
+        <td th:text="${t.numeroCompteSource}"></td>
+        <td th:text="${t.numeroCompteDestination}"></td>
+        <td th:text="${t.dateVirement}"></td>
+    </tr>
+</table>
+</body>
+</html>

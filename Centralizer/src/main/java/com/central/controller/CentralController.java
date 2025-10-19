@@ -20,6 +20,6 @@ public class CentralController {
 
     @GetMapping("comptecourant")
     public String CompteCourant(){
-        return "courant/acceuil";
+        return "compte/acceuil";
     }
 }

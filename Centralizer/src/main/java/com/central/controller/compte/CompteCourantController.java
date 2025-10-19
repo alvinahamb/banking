@@ -1,4 +1,4 @@
-package com.central.controller.depot;
+package com.central.controller.compte;
 
 import com.central.model.courant.*;
 import com.central.service.courant.*;
@@ -22,7 +22,7 @@ public class CompteCourantController {
     private TypeOperationService typeOperationService;
     @Autowired
     private OperationsCourantService operationsCourantService;
-    String view = "courant/compte";
+    String view = "compte/courant";
 
     @GetMapping("/all")
     public String getAll(Model model) {
